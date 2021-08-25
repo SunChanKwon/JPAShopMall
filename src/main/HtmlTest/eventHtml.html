@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(function (){
+
+            $("h1").click(function (){
+                console.log($(this).text());
+                //이벤트 처리하기
+                $(this).css("background-color",'yellow');
+                $(this).text('클릭 이벤트가 발생함.');});
+
+            //         이벤트종료
+            $("h2").on('click',function ()
+            {
+                $(this).css("background-color",'pink');
+
+            });
+
+            $('h3').on({
+                onmouseover:function ()
+                {
+                    $(this).css('background-color','pink');
+                },mouseleave:function (){
+                    $(this).css('background-color','#fff');
+                }
+            });
+
+            $('input').on('click focus',function (){
+              $(this).val("click 또는 fousc이벤트가 발생함");
+            });
+        });
+    </script>
+</head>
+<body>
+<h1> jquery 이벤트 테스트111</h1>
+<h1> jquery 이벤트 테스트222</h1>
+<h1> jquery 이벤트 테스트333</h1>
+<h1> jquery 이벤트 테스트444</h1>
+<h1> jquery 이벤트 테스트555</h1>
+
+<h2> jquery 이벤트 테스트111</h2>
+<h2> jquery 이벤트 테스트222</h2>
+<h2> jquery 이벤트 테스트333</h2>
+<h2> jquery 이벤트 테스트444</h2>
+<h2> jquery 이벤트 테스트555</h2>
+
+<h3> jquery 이벤트 테스트111</h3>
+<h3> jquery 이벤트 테스트222</h3>
+<h3> jquery 이벤트 테스트333</h3>
+<h3> jquery 이벤트 테스트444</h3>
+<h3> jquery 이벤트 테스트555</h3>
+
+<input type="button" value="12345"/>
+<input type="button" value="abcde"/>
+<input type="button" value="가나다라"/>
+</body>
+</html>

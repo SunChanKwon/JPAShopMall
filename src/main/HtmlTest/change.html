@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{font-size:17px;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(function () {
+        //컬러명
+        var rgb = ['rgb(255,0,0)', '#00f', 'yellow', '#888', 'pink', 'orange'];
+        //컬러코드
+        var colorName = ['빨강', '파랑', '노랑', '회색', '핑크', '오렌지색'];
+
+        var tag = "<select>";
+        //
+        colorName.map(function (i, j) {
+            tag += "<option value='" + rgb[j] + "'>" + i + "</option>";
+        })
+        tag += '</select>';
+
+        $('body').prepend(tag);
+        /////////////////////////////////////////////////////////////////////////////
+        $('select').change(function () {
+           $('div').css('color',$('select').val());
+        })
+
+        $("input[type=button]").on('click',function(){
+
+            var idx = $("input[type=button]").index(this);
+            //방금 이벤트가 발생한 이벤트의 버튼을 넘겨줘라
+
+            //현재 글자 크기를
+            var nowsize = parseInt($("div").css('font-size'));
+            console.log(nowsize);
+
+            if(idx==0)
+            {
+                $('div').css('font-size',nowsize-1+'px');
+            }
+            else if(idx==1)
+            {
+                $('div').css('font-size','16px');
+            }
+            else if(idx==2)
+            {
+                $('div').css('font-size',nowsize+1+'px');
+            }
+        });
+    });
+</script>
+
+<body>
+<input type="button" value="-">
+<input type="button" value="0">
+<input type="button" value="+">
+<div>
+    자정부터 오전 6시 사이 16세 미만 청소년의 온라인 게임 접속을 강제로 차단하는 ‘게임 셧다운제’가 찬반 논란 속에 결국 10년 만에 폐지되는 쪽으로 일단락됐다. 대신 게임 과몰입 예방조치가 함께
+    추진되면서 청소년이나 보호자가 원하는 시간대로 게임 시간을 제한할 수 있도록 하는 ‘시간 선택제’로 일원화된다.
+
+    학부모 단체들은 “과도한 게임 이용으로 인한 성장기 청소년들의 건강 문제와 사회적·경제적 문제가 잇따를 수 있다”며 우려하고 있다.
+
+    문화체육관광부와 여성가족부는 25일 정부세종청사에서 유은혜 부총리 겸 교육부 장관 주재로 열린 사회관계장관회의에서 과잉 규제 논란이 불거진 게임 셧다운제를 폐지하고 게임시간 선택제를 도입하기로 했다고
+    밝혔다. 게임 셧다운제는 그동안 실효성 논란이 꾸준했지만, 지난달 초부터 개선 논의가 재점화됐다. 12세 이상 이용가 등급인 인기 게임 ‘마인크래프트’가 셧다운제를 피하기 위해 한국에서만 ‘19금’
+    게임으로 전환될 예정이라는 소식이 전해지며 논란에 다시 불이 붙었다.
+
+    게임 셧다운제 규정에 의하면 업체가 심야에 청소년에게 서비스를 제공할 경우 2년 이하의 징역 또는 1000만 원 이하의 벌금에 처해진다.
+
+    게임시간 선택제는 18세 미만 청소년 본인이나 법정대리인의 요청 시, 원하는 시간대로 게임 이용시간을 설정할 수 있도록 하는 것을 주요 내용으로 한다. 게임문화재단이 이용자 신청과 민원처리 관련 업무를
+    담당키로 했다.
+</div>
+</body>
+
+</html>

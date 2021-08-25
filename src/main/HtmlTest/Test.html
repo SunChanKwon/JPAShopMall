@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function ()
+        {
+            $("body").html("<div></div>");
+            $("div").first().css("height","40px").css("background","rgb(238,135,152)");
+            //블루바
+            $("body").append("<div id='blue'></div>");
+            $('#blue').css('height','22px').css('background','rgb(84,174,200)');
+
+            $("#blue").after('<img src="../img/img.jpg"/>');
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
