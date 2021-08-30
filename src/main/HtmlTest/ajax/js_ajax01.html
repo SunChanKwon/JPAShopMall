@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    function ajaxStart(){
+      var xhttp = new XMLHttpRequest();
+
+      //서버에 요청후 가져온 정보를 처리하는 곳--
+      xhttp.onreadystatechange = function (){
+        //서버에서 정보를 가져오면 div에 보여주는 작업을 한다.
+        // readyState :XMLHTTPr 객체의 처리 상태를 가지고 있음
+        //0. 초기화 실패, 1:서버연결, 2.요청이접수,3:처리요청. 4:요청이 완료
+        // status : 요청처리 상태를 결과를 반환 (200:정상처리, 403: 금지, 404:찾을수 없음)
+
+        //statusText : 'OK' , 'NOT Found'
+        //responseText : 서버에서 전달받은 정보가 있음
+
+        console.log('readtState=',this.readyState);
+        console.log('status=',this.status);
+
+        if(this.readyState==4 && this.status==200)//요청이 정상적으로 처리
+        {
+          document.getElementById("ajaxResult").innerHTML = this.responseText;
+        }
+      }
+      //서버에 정보를 요청
+      //데이터전송방식(post,get) 서버에서 가져올 데이터, 동기식, 비동기식(true)
+      xhttp.open('GET','ajax_test.txt',true);
+      xhttp.send();
+    }
+  </script>
+</head>
+<body>
+<div>
+  <button onclick="ajaxStart()"> javaScript로 ajax 실행하기</button>
+  <div id="ajaxResult"></div>
+
+</div>
+</body>
+</html>

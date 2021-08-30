@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(()=>{
+      $('button').click(function (){
+        $.ajax({
+            url:'ajax_data.json',
+            dataType:'json',//서버에 접속할 파일
+            success:function (result){
+              console.log(result);
+              //                            index=0,1,2,3 객체=
+              $.each(result.rank, function (i,            j)
+              {
+                    var tag="<li>"+j.name+","+j.local+","+j.tel+"</li>";//형식을 만들기 중요하다.
+                    $('#jsonData').append(tag);
+              })
+              //서버에 정상적으로 접속하여 정보를 받았을때 실행하는 함수,//받은 정보는 매개변수가 가지고 있다.
+            },error:function (request,status,error)//
+          { //전송 실패시 실행되는 함수
+              console.log('code=',request.code);
+            console.log('message=',request.responseText);
+            console.log('code=',status);
+            console.log('code=',error);
+
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+<button>클릭하시면 json파일의 내용을 가져옵니다.</button>
+<hr/>
+<ol id="jsonData"></ol>
+<img src="../../img/movie01.png"/>
+</body>
+</html>
