@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <link rel="stylesheet" href="css/suggestion.css"/>
+</head>
+
+<style>
+  ul, li{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+</style>
+<script>
+  let count=0;
+  $(function(){
+    $('#searchBox1').click(function(){
+      count++;
+      console.log(",증가뉼림");
+      console.log(count);
+      alert(count);
+    });
+  });
+
+  function test1(){
+    console.log("감소뉼림");
+    document.getElementById("test").style.display = "none";
+    count--;
+    console.log(count);
+    alert(count);
+  }
+  if(count==9)
+  {
+    console.log("더이상 추가할수없습니다");
+  }
+</script>
+<body>
+<hr>
+<div class="MainBox">
+
+<!--  <div class="noticebox">-->
+<!--    <div class="serachBox">-->
+<!--      <div class="seach">-->
+
+<!--        <input type="text" value="">-->
+<!--        <button type="button" id="searchBox1" value="ddddd"/>-->
+<!--      </div>-->
+
+<!--      <div class="serachResult">-->
+
+<!--        <div id="test">-->
+<!--          <div><a onclick="test1()">a</a></div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="insertData">-->
+<!--        <div></div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+
+<!--    <br>-->
+    <div>
+      <div class="contentbox">
+        <div class="noticeNum"><p class="textContent">100</p></div><!--number들어갈곳-->
+        <div class="noticeImage"> <img id="ImgContent" src="img/smile.png"/></div> <!--이미지 링크 들어갈곳-->
+        <div class="noticeContent">
+          <p id="contentText">#캠핑 #서울 #캠핑장</p> <!--content들어갈곳-->
+
+          <p  id="contentText">2021-10-29(월)</p> <!--date들어갈곳-->
+        </div>
+
+        <div class="noticeWrite">
+          <p class="textContent">작성자</p> <!--writer들어갈곳-->
+        </div>
+
+        <div class="CallContent">
+          <img id="ImgCall" src=""/><br> <!-- -->
+        </div>
+
+        <div class="HitContent">
+          <p class="textContent">0</p>
+        </div>
+
+        <div class="CallContent">
+          <img id="ImgCall" src=""/><br> <!-- -->
+        </div>
+
+        <div class="HitContent">
+          <p class="textContent">0</p>
+        </div>
+
+        <div class="HitContent">
+          <p class="textContent">102</p>
+        </div>
+
+        <div class="HitContent">
+          <p class="textContent">3</p>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="contentbox">
+        <div class="noticeNum"><p class="textContent">100</p></div><!--number들어갈곳-->
+        <div class="noticeImage"> <img id="ImgContent" src="img/smile.png"/></div> <!--이미지 링크 들어갈곳-->
+        <div class="noticeContent">
+          <p id="contentText">#캠핑 #서울 #캠핑장</p> <!--content들어갈곳-->
+
+          <p  id="contentText">2021-10-29(월)</p> <!--date들어갈곳-->
+        </div>
+
+        <div class="noticeWrite">
+          <p class="textContent">작성자</p> <!--writer들어갈곳-->
+        </div>
+
+        <div class="CallContent">
+          <img id="ImgCall" src=""/><br> <!-- -->
+        </div>
+
+        <div class="HitContent">
+          <p class="textContent">0</p>
+        </div>
+
+        <div class="CallContent">
+          <img id="ImgCall" src=""/><br> <!-- -->
+        </div>
+
+        <div class="HitContent">
+          <p class="textContent">0</p>
+        </div>
+
+        <div class="HitContent">
+          <p class="textContent">102</p>
+        </div>
+
+        <div class="HitContent">
+          <p class="textContent">3</p>
+        </div>
+
+      </div>
+      <br>
+
+
+    </div>
+<div class ="SelectButton">
+  <ul Class="ChageButton">
+    <li><a href='#'>◁</a></li>
+    <li><a href='#'>1</a></li>
+    <li><a href='#'>2</a></li>
+    <li><a href='#'>3</a></li>
+    <li><a href='#'>▷</a></li>
+  </ul>
+  <button id="SuggestionWriteButton">글쓰기</button>
+</div>
+  </div>
+</body>
+
+</html>
+
+    </div>
+
+ </div>

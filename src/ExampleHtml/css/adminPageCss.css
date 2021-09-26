@@ -1,0 +1,58 @@
+li,ul{
+    list-style-type: none;
+}
+.AdminBox /* 메인박스 크기 div*/
+{
+    position:relative;
+    margin:0 auto;
+    width:1300px;
+    height: 100%;
+}
+
+.AdminLeftSelectBox { /*왼쪽박스 div*/
+    width: 20%;
+    height: 100%;
+    display: inline;
+    margin:0 auto;
+    float: left;
+    border: solid black 1px;
+}
+
+.AdminRightSelectBox /*오른쪽박스 div*/
+{
+    width: 79%;
+    height: 100%;
+    display: inline;
+    float: left;
+    border: solid black 1px;
+}
+
+.AdminImagBox /*이미지 들어갈 div*/
+{
+    width: 50%;
+    height: 90%;
+    margin: 20px 10px;
+    display: inline;
+    float: left;
+    border: solid black 1px;
+}
+#ImgContent{  /*이미지 id로 고정 싸이즈 때문에고정*/
+    width: 350px;
+    height: 350px;
+    margin: 50px 50px;
+}
+.AdmintextBox /*글짜 들어갈 div*/
+{
+    width: 40%;
+    height: 90%;
+    margin: 20px auto;
+    display: inline;
+    float: left;
+}
+
+.TextContent /*글짜 속성*/
+{
+    position: absolute;
+    margin: 200px 0px;
+    text-align: center;
+}

@@ -17,23 +17,24 @@
 
         .wordCut{
             white-space: nowrap;
+            /* 글자 넘어가면히든*/
             overflow: hidden;
-            text-overflow: ellipsis;
+
         }
     </style>
 
-    <script>
-        $(()=>{
-            $('#allChk').on('change',function (){
-                $("#boardList input[type=checkbox]").prop('checked',$('#allChk').prop('checked'));
-            });
-        });
-    </script>
+
 </head>
 <body>
 <div class="container">
     <input type="checkbox" id="allChk">전체선택
     <ul id="boardList">
+        <li>  </li>
+        <li> 번호</li>
+        <li> 제목</li>
+        <li> 작성자</li>
+        <li> 작성일</li>
+        <li> 조회수</li>
         <li><input type="checkbox" name="chk" value="100"></li>
         <li>100</li>
         <li class="wordCut">글제목 asdasdasdasdasdasdasdasdasdasdasd</li>
