@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+#mypageTab{
+	width:1400px;
+	height: 800px;
+	margin:0 auto;
+	background-color: #5294de;
+}
+#mypageTab>ul{
+	width:200px;
+	height:800px;
+	float:left;
+	text-align:center;
+	display:block;
+	margin:0 auto;
+	padding:0;
+	position:relative;
+	background-color: #fffff1;
+}
+#mypageTab>ul>li{
+	width:150px;
+	height:50px;
+	line-height:50px;
+	list-style:none;
+	margin:auto;
+	text-align:center;
+	position:relative;
+	cursor:pointer;
+	background-color: pink;
+}
+#mypageTab>div{
+	padding:0;
+	display:none;
+	/*background-color:pink;*/
+	margin-left:300px;
+	min-height:600px;
+	padding:10px;
+	position:relative;
+
+}
+#mypageTab>div.on{
+	padding:0;
+	display:block;
+}
+
+/*----------------------프로필(사진) div ------------------ */
+#profileDiv{
+	margin:0;
+	padding:0;
+	display:flex;
+	justify-content:center;
+	width:90%;
+	height:200px;
+	border:2px solid gray;
+	border-radius:5px;
+	/*background-color:yellow;*/
+}
+#profileDiv>div{
+	float:left;
+	margin:10px 15px;
+	width:500px;
+	height:90%;	
+	border-right:1px solid gray;
+}
+#profileDiv>div>div:nth-child(1){
+	margin-top:20px;
+	width:30%;
+	height:100%;
+	float:left;
+}
+#profileDiv button{
+	width:130px;
+	height:130px;
+	border-radius:50%;
+}
+#profileDiv>div>div:nth-child(2){
+	margin-top:20px;
+	width:60%;
+	height:100%;
+	float:left;
+}
+#profileDiv>div:nth-child(2){
+	border:none;
+}
+.Center
+{
+	margin-top: 80px;
+}
+/*------------------메인 스타일-------------------------*/
+.AdminMainProfile /*오른쪽박스 div*/
+{
+	width: 80%;
+	height: 100%;
+	display: inline;
+	float: left;
+}
+
+.AdminProfileImagBox /*이미지 들어갈 div*/
+{
+	width: 50%;
+	height: 90%;
+	display: inline;
+	float: left;
+
+}
+#AdminProfileImgContent{  /*이미지 id로 고정 싸이즈 때문에고정*/
+	width: 350px;
+	height: 350px;
+	margin: 130px 90px;
+}
+.AdminProfileAdmintextBox /*글짜 들어갈 div*/
+{
+	width: 40%;
+	height: 90%;
+	margin: 20px auto;
+	display: inline;
+	float: left;
+}
+
+.AdminMianTextContent /*글짜 속성*/
+{
+	position: absolute;
+	margin: 180px 180px;
+	text-align: center;
+	font-size: 24px;
+}
+/*------------------회원목록 css-------------------------*/
+.AdminMember
+{
+	width: 1000px;
+	height: 750px;
+	display: inline;
+	float: left;
+}
+
+.AdminMemberListBoX{
+	margin-top: 60px;
+}
+
+.AdminMember >li,ul{
+	margin: 0;padding:0;list-style-type: none;
+}
+
+#MemberList>li{
+	float:left;
+	height: 40px;
+	margin-right: 5px;
+	width: 10%;
+	border: red 1px solid ;
+	text-align: center;
+}
+
+/*------------------관리자 만들기 css-------------------------*/
+.AdminInsert
+{
+	width: 1000px;
+	height: 750px;
+	display: inline;
+	float: left;
+}
+
+.AdminInsertBox{
+	margin-top: 60px;
+}
+
+.AdminMember >li,ul{
+	margin: 0;padding:0;list-style-type: none;
+}
+
+#AdminList>li{
+	float:left;
+	height: 40px;
+	margin-right: 6px;
+	width: 15%;
+	border: red 1px solid ;
+	text-align: center;
+}
+#AdminList
+{
+	width: 100%;
+	height: 100px;
+	border:red 1px solid;
+	overflow-y: scroll;
+}

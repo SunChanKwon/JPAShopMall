@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+	<script type="text/javascript">
+	$(()=>{
+		$('#Meunselect li').click(function(){
+			var idx = $(this).index();
+			$('#mypageTab li').removeClass('on');
+			$('#mypageTab li').eq(idx).addClass('on');
+			$('#mypageTab>div').hide();
+			$('#mypageTab>div').eq(idx).show();
+		});
+	});
+
+	function Memberchage(){
+		window.open('MemberChage.html', '네이버팝업', 'width=700px,height=800px,scrollbars=yes');
+	}
+
+</script>
+<link rel="stylesheet" href="Admin.css" type="text/css"/>
+</head>
+<body>
+<br>
+	<div id='mypageTab'><!-- mypage 전체 div -->
+		<ul id="Meunselect">
+			<li class='on'></li>
+			<li>회원관리</li>
+			<li>신고 게시물 확인</li>
+			<li>1:1 문의 확인</li>
+			<li>관리자만들기</li>
+			<li>1:1 문의</li>
+		</ul>
+		<div class='on'><!-- 프로필 -->
+			<div class="AdminMainProfile">
+				<div class="Center"></div>
+				<div class="AdminProfileImagBox">
+					<img id="AdminProfileImgContent" src="img/smile.png">
+				</div>
+				<div class="AdminProfileAdmintextBox">
+					<div class="AdminMianTextContent">
+							<h3>슈퍼관리자</h3>
+						<h3>권순찬님</h3>
+						<h3> 안녕하세요</h3></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div><!--회원관리-->
+			<div class="AdminMember">
+				<div class="AdminMemberListBoX"></div>
+				<ul id="MemberList">
+					<li>순번</li>
+					<li>아이디</li>
+					<li>이름</li>
+					<li>닉네임</li>
+					<li>게시물 수</li>
+					<li>활동상태</li>
+					<li>등급</li>
+					<li>매너점수</li>
+					<li>   </li>
+					<br>
+					<!-- 데이터내용-->
+					<li>1</li>
+					<li>ksc7662</li>
+					<li>권순찬</li>
+					<li>권순찬11</li>
+					<li>12</li>
+					<li>양호</li>
+					<li>골드</li>
+					<li>4.5</li>
+					<li><input type="button" value="관리" onclick="Memberchage()"/></li>
+					<br>
+				</ul>
+			</div>
+		</div>
+		<div class=""><!--신고 게시물 확인-->
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+
+		<div><!-- 1:1문의 -->
+			<h2>1:1문의</h2>
+		</div>
+		<div><!-- 관리자 만들기 -->
+			<div class="AdminInsert">
+				<div class="AdminInsertBox"></div>
+				<div class="AdminList">
+				<ul id="AdminList">
+					<li>순번</li>
+					<li>아이디</li>
+					<li>이름</li>
+					<li>닉네임</li>
+					<li>활동상태</li>
+					<li>등록일</li>
+					<br>
+					<!-- 데이터내용-->
+					<li>1</li>
+					<li>ksc7662</li>
+					<li>권순찬</li>
+					<li>권순찬11</li>
+					<li>관리자</li>
+					<li>2014-01-02</li>
+					<br>
+
+					<li>1</li>
+					<li>ksc7662</li>
+					<li>권순찬</li>
+					<li>권순찬11</li>
+					<li>관리자</li>
+					<li>2014-01-02</li>
+					<br>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+
+</body>
+</html>
