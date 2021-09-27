@@ -8,7 +8,6 @@
 		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
 	<script type="text/javascript">
 	$(()=>{
 		$('#Meunselect li').click(function(){
@@ -29,16 +28,16 @@
 </head>
 <body>
 <br>
-	<div id='mypageTab'><!-- mypage 전체 div -->
+	<div id='mypageTab'><!--  전체 div -->
 		<ul id="Meunselect">
 			<li class='on'></li>
 			<li>회원관리</li>
 			<li>신고 게시물 확인</li>
 			<li>1:1 문의 확인</li>
+			<li>관리자관리</li>
 			<li>관리자만들기</li>
-			<li>1:1 문의</li>
 		</ul>
-		<div class='on'><!-- 프로필 -->
+		<div class='on'><!-- 메인 프로필 -->
 			<div class="AdminMainProfile">
 				<div class="Center"></div>
 				<div class="AdminProfileImagBox">
@@ -53,10 +52,24 @@
 				</div>
 			</div>
 		</div>
+		<!----------->
 
-		<div><!--회원관리-->
+		<div><!--회원목록-->
 			<div class="AdminMember">
-				<div class="AdminMemberListBoX"></div>
+				<div class="PaddingBox"></div>
+				<div class="MemberSerchBox">
+					<form>
+						<select name="MemberSelect" id="MemberSelect">
+							<option value="이름">이름</option>
+							<option value="아이디">아이디</option>
+						</select>
+						<input type="text" id="MemberSerch" name="MemberSerch">
+						<input type="submit" value="찾기" onclick=""/>
+					</form>
+				</div>
+				<br>
+				<br>
+
 				<ul id="MemberList">
 					<li>순번</li>
 					<li>아이디</li>
@@ -79,49 +92,128 @@
 					<li>4.5</li>
 					<li><input type="button" value="관리" onclick="Memberchage()"/></li>
 					<br>
+
 				</ul>
+
 			</div>
 		</div>
+
+		<!----------->
 		<div class=""><!--신고 게시물 확인-->
+			<div class="PaddingBox"></div>
 			<ul>
-				<li></li>
+				<li> 신고 게시물 확인 준비중입니다</li>
 			</ul>
 		</div>
 
-		<div><!-- 1:1문의 -->
-			<h2>1:1문의</h2>
-		</div>
-		<div><!-- 관리자 만들기 -->
-			<div class="AdminInsert">
-				<div class="AdminInsertBox"></div>
-				<div class="AdminList">
-				<ul id="AdminList">
-					<li>순번</li>
-					<li>아이디</li>
-					<li>이름</li>
-					<li>닉네임</li>
-					<li>활동상태</li>
-					<li>등록일</li>
-					<br>
-					<!-- 데이터내용-->
-					<li>1</li>
-					<li>ksc7662</li>
-					<li>권순찬</li>
-					<li>권순찬11</li>
-					<li>관리자</li>
-					<li>2014-01-02</li>
-					<br>
+		<!----------->
+		<div><!-- 1:1문의 --><div class="PaddingBox"></div>
 
-					<li>1</li>
-					<li>ksc7662</li>
-					<li>권순찬</li>
-					<li>권순찬11</li>
-					<li>관리자</li>
-					<li>2014-01-02</li>
-					<br>
-				</ul>
+			<div class="QnaMainBox">
+			<div class="QnaLeftBox">
+				<div class="QnaLeftButtonBox">
+
 				</div>
 			</div>
+
+			<div class="QnaRightBox">
+				<div class="QnarightButtonBox">
+					<button class="ButtonWriteSend">게시물 블럭처리</button>
+					<button class="ButtonBlock">작성자에게 알림</button>
+					<button class="ButtonResultSend">신고자에게 알림</button>
+				</div>
+				<div>
+					<ul id="QnaList">
+						<li>NO</li>
+						<li>제목</li>
+						<li>신고자</li>
+						<li>등록일</li>
+
+						<li>5</li>
+						<li class="QnaTextHidden">오늘 날씨 너무 좋네요</li>
+						<li>날씨요정</li>
+						<li>등록일</li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<!----------->
+		<div><!-- 관리자관리 -->
+			<div class="AdminMemberUpdate">
+				<div class="PaddingBox"></div>
+				<div class="AmdinSerchMemberBox">
+					<form>
+						<input name="AdminSelect" id="AdminSelect">
+							<option value="이름">이름</option>
+							<option value="아이디">아이디</option>
+						</input>
+					<input type="text" id="AdminSerch" name="AdminSerch">
+					<input type="submit" value="찾기" onclick=""/>
+					</form>
+				</div>
+				<br>
+				<br>
+				<ul id="AdminList">
+					<li>회원번호</li>
+					<li>아이디</li>
+					<li>이름</li>
+					<li>이메일</li>
+					<li>가입일자</li>
+					<li> 관리 </li>
+					<br>
+					<li>50</li>
+					<li>ksc7662</li>
+					<li>권순찬</li>
+					<li>ksc7662@naver.com</li>
+					<li>12</li>
+					<li><input type="button" value="관리" onclick="Memberchage()"/></li>
+					<br>
+					<li>50</li>
+					<li>ksc7662</li>
+					<li>권순찬</li>
+					<li>ksc7662@naver.com</li>
+					<li>12</li>
+					<li><input type="button" value="관리" onclick="Memberchage()"/></li>
+					<br>
+				</ul>
+			</div>
+		</div>
+
+		<div><!-- 관리자 만들기 -->
+			<div class="AdminInsert">
+				<div class="PaddingBox"></div>
+				<div class="AdminInsertBox">
+					<form>
+						<ul style="text-align: center">
+						<li>아이디</li>
+						<li><input type='text' name='M_UserId' id='M_UserId'/></li><BR>
+						<li>비밀번호</li>
+						<li><input type='text' name='M_UserId' id='M_USERPWD1'/></li><BR>
+						<li>이름</li>
+						<li><input type='text' name='M_USERNAME' id='M_USERNAME' /></li><BR>
+						<li>닉네임</li>
+						<li><input type='text' name='M_NickName' id='M_NickName'/></li><BR>
+						<li>이메일</li>
+						<li><input type='text' name='M_EMAIL' id='M_EMAIL' /></li><BR>
+						<li>전화번호</li>
+						<li><input type='text' name='M_TEL' id='M_TEL' /></li><BR>
+						<li>주소</li>
+						<li><input type='text' name='M_ADDR' id='M_ADDR'/><BR>
+							<input type="button" name="ADDRES" ID="ADDRES" VALUE="주소 검색"/>
+						</li><BR>
+						<li>생일</li>
+						<li><input type='date' name='M_BITH' id='M_BITH'/></li><BR>
+						<li hidden>등급</li>
+						<li><input type='text' name='M_Rank' id='M_Rank' value="관리자" hidden/></li>
+						</li>
+						<br>
+						<li><input type='submit' value = '관리자 등록'></li>
+						</ul>
+					</form>
+				</div>
+		</div>
 		</div>
 	</div>	
 	

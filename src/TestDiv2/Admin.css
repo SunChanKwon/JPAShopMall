@@ -1,24 +1,23 @@
 @charset "UTF-8";
 
+li{ list-style-type: none;
+	margin: 0 auto;}
 #mypageTab{
-	width:1400px;
-	height: 800px;
+	width:1300px;
 	margin:0 auto;
-	background-color: #5294de;
 }
 #mypageTab>ul{
 	width:200px;
-	height:800px;
 	float:left;
-	text-align:center;
+	text-align:left;
 	display:block;
 	margin:0 auto;
 	padding:0;
 	position:relative;
-	background-color: #fffff1;
+	border-right: 1px solid black;
 }
 #mypageTab>ul>li{
-	width:150px;
+	width:200px;
 	height:50px;
 	line-height:50px;
 	list-style:none;
@@ -26,7 +25,6 @@
 	text-align:center;
 	position:relative;
 	cursor:pointer;
-	background-color: pink;
 }
 #mypageTab>div{
 	padding:0;
@@ -53,7 +51,6 @@
 	height:200px;
 	border:2px solid gray;
 	border-radius:5px;
-	/*background-color:yellow;*/
 }
 #profileDiv>div{
 	float:left;
@@ -86,7 +83,7 @@
 {
 	margin-top: 80px;
 }
-/*------------------메인 스타일-------------------------*/
+/*------------------메인 프로필-------------------------*/
 .AdminMainProfile /*오른쪽박스 div*/
 {
 	width: 80%;
@@ -124,6 +121,7 @@
 	text-align: center;
 	font-size: 24px;
 }
+
 /*------------------회원목록 css-------------------------*/
 .AdminMember
 {
@@ -133,10 +131,6 @@
 	float: left;
 }
 
-.AdminMemberListBoX{
-	margin-top: 60px;
-}
-
 .AdminMember >li,ul{
 	margin: 0;padding:0;list-style-type: none;
 }
@@ -144,11 +138,111 @@
 #MemberList>li{
 	float:left;
 	height: 40px;
-	margin-right: 5px;
-	width: 10%;
-	border: red 1px solid ;
+	width: 11%;
+	border-bottom: red 1px solid;
 	text-align: center;
 }
+#MemberList
+{
+	width: 100%;
+	height: 500px;
+	overflow-y: scroll;
+}
+.MemberSerchBox
+{
+	float: right;
+}
+/*------------------1:1문의--------------------*/
+.QnaSerchBox{
+	float: right;
+}
+.QnaMainBox{
+	border: black 1px solid;
+	width: 800px;
+	height: 500px;
+	float: left;
+}
+.QnaLeftBox
+{
+	border: red 1px solid;
+	width: 300px;
+	height: 500px;
+	float: left;
+}
+.QnaRightBox
+{
+	border: #5294de 1px solid;
+	width: 496px;
+	height: 500px;
+	float: right;
+}
+.ButtonWriteSend
+{
+	width: 120px;
+	height: 50px;
+	font-size: 11px;
+	margin: 0 auto;
+} /*작성자 보내기*/
+.ButtonBlock
+{
+	width: 120px;
+	height: 50px;
+	font-size: 11px;
+	margin: 0 auto;
+}/*게시물 블러처리*/
+
+.ButtonResultSend
+{
+	width: 120px;
+	height: 50px;
+	font-size: 11px;
+	margin: 0 auto;
+}/*처리결과 전송 */
+
+.QnaButtonBox
+{
+	margin: 0 auto;
+	width: 100%;
+	height: 55px;
+	border: yellow 1px solid;
+}
+
+#QnaList>li
+{
+	float:left;
+	height: 40px;
+	width: 100px;
+	line-height:50px;
+	text-align: center;
+}
+
+#QnaList>li:nth-child(4n+2){background-color: red;width: 39%;overflow: hidden;}
+
+/*------------------관리자 관리--------------------*/
+.AdminMemberUpdate >li,ul{
+	margin: 0;padding:0;list-style-type: none; font-size: 10px;
+}
+.AmdinSerchMemberBox
+{
+	float:right;
+}
+#AdminList>li{
+	float:left;
+	height: 40px;
+	width: 140px;
+	line-height:50px;
+	text-align: center;
+}
+
+#AdminList /* 어드민 리스트보는박스*/
+{
+	width: 100%;
+	height: 500px;
+	overflow-y: scroll;
+	border-top: 10px;
+	border: red 1px solid ;
+}
+#AdminList>li:nth-child(7n+4){width:27%;}
 
 /*------------------관리자 만들기 css-------------------------*/
 .AdminInsert
@@ -158,27 +252,16 @@
 	display: inline;
 	float: left;
 }
-
-.AdminInsertBox{
-	margin-top: 60px;
-}
-
-.AdminMember >li,ul{
-	margin: 0;padding:0;list-style-type: none;
-}
-
-#AdminList>li{
-	float:left;
-	height: 40px;
-	margin-right: 6px;
-	width: 15%;
-	border: red 1px solid ;
-	text-align: center;
-}
-#AdminList
+#AdminInsertBox
 {
 	width: 100%;
-	height: 100px;
+	height: 400px;
+	border:red 1px solid;
+}
+
+.AdminListBox{
+	width: 100%;
+	height: 300px;
 	border:red 1px solid;
 	overflow-y: scroll;
 }
