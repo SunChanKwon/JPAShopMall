@@ -162,6 +162,12 @@ li{ list-style-type: none;
 	height: 500px;
 	float: left;
 }
+.QnaLeftButtonBox{
+	border: rebeccapurple 1px solid;
+	width: 300px;
+	height: 450px;
+}
+
 .QnaLeftBox
 {
 	border: red 1px solid;
