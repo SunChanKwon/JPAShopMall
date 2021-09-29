@@ -7,7 +7,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
 		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+	<link type="text/css" rel="stylesheet" href="css/Admin.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 	$(()=>{
 		$('#Meunselect li').click(function(){
@@ -20,11 +25,11 @@
 	});
 
 	function Memberchage(){
-		window.open('MemberChage.html', '네이버팝업', 'width=700px,height=800px,scrollbars=yes');
+		window.open('MemberChage.html', '네이버팝업', 'width=500px,height=600px,scrollbars=yes');
 	}
 
 </script>
-<link rel="stylesheet" href="Admin.css" type="text/css"/>
+<link rel="stylesheet" href="css/Admin.css" type="text/css"/>
 </head>
 <body>
 <br>
@@ -92,9 +97,7 @@
 					<li>4.5</li>
 					<li><input type="button" value="관리" onclick="Memberchage()"/></li>
 					<br>
-
 				</ul>
-
 			</div>
 		</div>
 
@@ -107,7 +110,8 @@
 		</div>
 
 		<!----------->
-		<div><!-- 1:1문의 --><div class="PaddingBox"></div>
+		<div><!-- 1:1문의 -->
+			<div class="PaddingBox"></div>
 
 			<div class="QnaMainBox">
 			<div class="QnaLeftBox">
@@ -124,11 +128,32 @@
 					<button class="ButtonBlock">작성자에게 알림</button>
 					<button class="ButtonResultSend">신고자에게 알림</button>
 				</div>
-				<div>
+				<br>
+				<div class="QnaBoardContent">
 					<ul id="QnaList">
 						<li>NO</li>
 						<li>제목</li>
 						<li>신고자</li>
+						<li>등록일</li>
+
+						<li>5</li>
+						<li class="QnaTextHidden">오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요</li>
+						<li>날씨요정</li>
+						<li>등록일</li>
+
+						<li>5</li>
+						<li class="QnaTextHidden">오늘 날씨 너무 좋네요</li>
+						<li>날씨요정</li>
+						<li>등록일</li>
+
+						<li>5</li>
+						<li class="QnaTextHidden">오늘 날씨 너무 좋네요</li>
+						<li>날씨요정</li>
+						<li>등록일</li>
+
+						<li>5</li>
+						<li class="QnaTextHidden">오늘 날씨 너무 좋네요</li>
+						<li>날씨요정</li>
 						<li>등록일</li>
 
 						<li>5</li>
@@ -137,9 +162,16 @@
 						<li>등록일</li>
 					</ul>
 				</div>
+				<div class="QnaButton">
+					<ul>
+						<li>
+
+						</li>
+					</ul>
+				</div>
 			</div>
-			</div>
-		</div>
+
+			</div></div>
 
 		<!----------->
 		<div><!-- 관리자관리 -->
