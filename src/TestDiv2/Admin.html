@@ -2,117 +2,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
-		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link type="text/css" rel="stylesheet" href="css/Admin.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-	$(()=>{
-		$('#Meunselect li').click(function(){
-			var idx = $(this).index();
-			$('#mypageTab li').removeClass('on');
-			$('#mypageTab li').eq(idx).addClass('on');
-			$('#mypageTab>div').hide();
-			$('#mypageTab>div').eq(idx).show();
+		$(()=>{
+			$('#Meunselect li').click(function(){
+				var idx = $(this).index();
+				$('#mypageTab li').removeClass('on');
+				$('#mypageTab li').eq(idx).addClass('on');
+				$('#mypageTab>div').hide();
+				$('#mypageTab>div').eq(idx).show();
+			});
 		});
-	});
+		/*test*/
+		function Memberchage(){
+			window.open('MemberChage.html', '네이버팝업', 'width=500px,height=600px,scrollbars=yes');
+		}
 
-	function Memberchage(){
-		window.open('MemberChage.html', '네이버팝업', 'width=700px,height=800px,scrollbars=yes');
-	}
-
-</script>
-<link rel="stylesheet" href="Admin.css" type="text/css"/>
+	</script>
+	<link rel="stylesheet" href="css/Admin.css" type="text/css"/>
 </head>
 <body>
 <br>
-	<div id='mypageTab'><!--  전체 div -->
-		<ul id="Meunselect">
-			<li class='on'></li>
-			<li>회원관리</li>
-			<li>신고 게시물 확인</li>
-			<li>1:1 문의 확인</li>
-			<li>관리자관리</li>
-			<li>관리자만들기</li>
-		</ul>
-		<div class='on'><!-- 메인 프로필 -->
-			<div class="AdminMainProfile">
-				<div class="Center"></div>
-				<div class="AdminProfileImagBox">
-					<img id="AdminProfileImgContent" src="img/smile.png">
-				</div>
-				<div class="AdminProfileAdmintextBox">
-					<div class="AdminMianTextContent">
-							<h3>슈퍼관리자</h3>
-						<h3>권순찬님</h3>
-						<h3> 안녕하세요</h3></h3>
-					</div>
+<div id='mypageTab'><!--  전체 div -->
+	<ul id="Meunselect">
+		<li class='on'></li>
+		<li>회원관리</li>
+		<li>신고 게시물 확인</li>
+		<li>1:1 문의 확인</li>
+		<li>관리자관리</li>
+		<li>관리자만들기</li>
+	</ul>
+	<div class='on'><!-- 메인 프로필 -->
+		<div class="AdminMainProfile">
+			<div class="Center"></div>
+			<div class="AdminProfileImagBox">
+				<img id="AdminProfileImgContent" src="img/smile.png">
+			</div>
+			<div class="AdminProfileAdmintextBox">
+				<div class="AdminMianTextContent">
+					<h3>슈퍼관리자</h3>
+					<h3>권순찬님</h3>
+					<h3> 안녕하세요</h3></h3>
 				</div>
 			</div>
 		</div>
-		<!----------->
+	</div>
+	<!----------->
 
-		<div><!--회원목록-->
-			<div class="AdminMember">
-				<div class="PaddingBox"></div>
-				<div class="MemberSerchBox">
-					<form>
-						<select name="MemberSelect" id="MemberSelect">
-							<option value="이름">이름</option>
-							<option value="아이디">아이디</option>
-						</select>
-						<input type="text" id="MemberSerch" name="MemberSerch">
-						<input type="submit" value="찾기" onclick=""/>
-					</form>
-				</div>
-				<br>
-				<br>
-
-				<ul id="MemberList">
-					<li>순번</li>
-					<li>아이디</li>
-					<li>이름</li>
-					<li>닉네임</li>
-					<li>게시물 수</li>
-					<li>활동상태</li>
-					<li>등급</li>
-					<li>매너점수</li>
-					<li>   </li>
-					<br>
-					<!-- 데이터내용-->
-					<li>1</li>
-					<li>ksc7662</li>
-					<li>권순찬</li>
-					<li>권순찬11</li>
-					<li>12</li>
-					<li>양호</li>
-					<li>골드</li>
-					<li>4.5</li>
-					<li><input type="button" value="관리" onclick="Memberchage()"/></li>
-					<br>
-
-				</ul>
-
-			</div>
-		</div>
-
-		<!----------->
-		<div class=""><!--신고 게시물 확인-->
+	<div><!--회원목록-->
+		<div class="AdminMember">
 			<div class="PaddingBox"></div>
-			<ul>
-				<li> 신고 게시물 확인 준비중입니다</li>
+			<div class="MemberSerchBox">
+				<form>
+					<select name="MemberSelect" id="MemberSelect">
+						<option value="이름">이름</option>
+						<option value="아이디">아이디</option>
+					</select>
+					<input type="text" id="MemberSerch" name="MemberSerch">
+					<input type="submit" value="찾기" onclick=""/>
+				</form>
+			</div>
+			<br>
+			<br>
+
+			<ul id="MemberList">
+				<li>순번</li>
+				<li>아이디</li>
+				<li>이름</li>
+				<li>닉네임</li>
+				<li>게시물 수</li>
+				<li>활동상태</li>
+				<li>등급</li>
+				<li>매너점수</li>
+				<li>   </li>
+				<br>
+				<!-- 데이터내용-->
+				<li>1</li>
+				<li>ksc7662</li>
+				<li>권순찬</li>
+				<li>권순찬11</li>
+				<li>12</li>
+				<li>양호</li>
+				<li>골드</li>
+				<li>4.5</li>
+				<li><input type="button" value="관리" onclick="Memberchage()"/></li>
+				<br>
 			</ul>
 		</div>
+	</div>
 
-		<!----------->
-		<div><!-- 1:1문의 --><div class="PaddingBox"></div>
+	<!----------->
+	<div class=""><!--신고 게시물 확인-->
+		<div class="PaddingBox"></div>
+		<ul>
+			<li> 신고 게시물 확인 준비중입니다</li>
+		</ul>
+	</div>
 
-			<div class="QnaMainBox">
+	<!----------->
+	<div><!-- 1:1문의 -->
+		<div class="PaddingBox"></div>
+
+		<div class="QnaMainBox">
 			<div class="QnaLeftBox">
 				<div class="QnaLeftButtonBox">
 					<div class="QnaDataBox">
+
+						<br><br>
+						<hr>
+						<li hidden>게시물번호</li>
+						<li>제목:{id}</li><li>신고 누적:{hit}</li>
+						<li>글쓴이:{userid}</li>
+						<li> <p><textarea cols="39" rows="12" disabled>내용:${content}내용:${content}내용:${content}내용:${content}내용:${content}내용:${content}내용:${content}내용:${content}내용:${content}내용:${content}</textarea></p></li>
+						<li>등록일</li>
 
 					</div>
 				</div>
@@ -124,7 +136,8 @@
 					<button class="ButtonBlock">작성자에게 알림</button>
 					<button class="ButtonResultSend">신고자에게 알림</button>
 				</div>
-				<div>
+				<br>
+				<div class="QnaBoardContent">
 					<ul id="QnaList">
 						<li>NO</li>
 						<li>제목</li>
@@ -132,63 +145,97 @@
 						<li>등록일</li>
 
 						<li>5</li>
-						<li class="QnaTextHidden">오늘 날씨 너무 좋네요</li>
+						<li class="QnaTextHidden"><a href="#">오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요오늘 날씨 너무 좋네요</a> </li>
+						<li>날씨요정</li>
+						<li>등록일</li>
+
+						<li>5</li>
+						<li class="QnaTextHidden"><a href="#">오늘 날씨 너무 좋네요</a></li>
+						<li>날씨요정</li>
+						<li>등록일</li>
+
+						<li>5</li>
+						<li class="QnaTextHidden"><a href="#">오늘 날씨 너무 좋네요</a></li>
+						<li>날씨요정</li>
+						<li>등록일</li>
+
+						<li>5</li>
+						<li class="QnaTextHidden"><a href="#">오늘 날씨 너무 좋네요</a></li>
+						<li>날씨요정</li>
+						<li>등록일</li>
+
+						<li>5</li>
+						<li class="QnaTextHidden"><a href="#">오늘 날씨 너무 좋네요</a></li>
 						<li>날씨요정</li>
 						<li>등록일</li>
 					</ul>
 				</div>
-			</div>
-			</div>
-		</div>
+				<div class="QnaButtonBox">
+					<ul class="QnaButton">
+						<li><a href="#"><</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
 
-		<!----------->
-		<div><!-- 관리자관리 -->
-			<div class="AdminMemberUpdate">
-				<div class="PaddingBox"></div>
-				<div class="AmdinSerchMemberBox">
-					<form>
-						<input name="AdminSelect" id="AdminSelect">
-							<option value="이름">이름</option>
-							<option value="아이디">아이디</option>
-						</input>
+						<li>></li>
+					</ul>
+				</div>
+			</div>
+
+		</div></div>
+
+	<!----------->
+	<div><!-- 관리자관리 -->
+		<div class="AdminMemberUpdate">
+			<div class="PaddingBox"></div>
+			<div class="AmdinSerchMemberBox">
+				<form>
+					<input name="AdminSelect" id="AdminSelect">
+					<option value="이름">이름</option>
+					<option value="아이디">아이디</option>
+					</input>
 					<input type="text" id="AdminSerch" name="AdminSerch">
 					<input type="submit" value="찾기" onclick=""/>
-					</form>
-				</div>
-				<br>
-				<br>
-				<ul id="AdminList">
-					<li>회원번호</li>
-					<li>아이디</li>
-					<li>이름</li>
-					<li>이메일</li>
-					<li>가입일자</li>
-					<li> 관리 </li>
-					<br>
-					<li>50</li>
-					<li>ksc7662</li>
-					<li>권순찬</li>
-					<li>ksc7662@naver.com</li>
-					<li>12</li>
-					<li><input type="button" value="관리" onclick="Memberchage()"/></li>
-					<br>
-					<li>50</li>
-					<li>ksc7662</li>
-					<li>권순찬</li>
-					<li>ksc7662@naver.com</li>
-					<li>12</li>
-					<li><input type="button" value="관리" onclick="Memberchage()"/></li>
-					<br>
-				</ul>
+				</form>
 			</div>
+			<br>
+			<br>
+			<ul id="AdminList">
+				<li>회원번호</li>
+				<li>아이디</li>
+				<li>이름</li>
+				<li>이메일</li>
+				<li>가입일자</li>
+				<li> 관리 </li>
+				<br>
+				<li>50</li>
+				<li>ksc7662</li>
+				<li>권순찬</li>
+				<li>ksc7662@naver.com</li>
+				<li>12</li>
+				<li><input type="button" value="관리" onclick="Memberchage()"/></li>
+				<br>
+				<li>50</li>
+				<li>ksc7662</li>
+				<li>권순찬</li>
+				<li>ksc7662@naver.com</li>
+				<li>12</li>
+				<li><input type="button" value="관리" onclick="Memberchage()"/></li>
+				<br>
+			</ul>
 		</div>
+	</div>
 
-		<div><!-- 관리자 만들기 -->
-			<div class="AdminInsert">
-				<div class="PaddingBox"></div>
-				<div class="AdminInsertBox">
-					<form>
-						<ul style="text-align: center">
+	<div><!-- 관리자 만들기 -->
+		<div class="AdminInsert">
+			<div class="PaddingBox"></div>
+			<div class="AdminInsertBox">
+				<form>
+					<ul style="text-align: center">
 						<li>아이디</li>
 						<li><input type='text' name='M_UserId' id='M_UserId'/></li><BR>
 						<li>비밀번호</li>
@@ -212,13 +259,13 @@
 						</li>
 						<br>
 						<li><input type='submit' value = '관리자 등록'></li>
-						</ul>
-					</form>
-				</div>
+					</ul>
+				</form>
+			</div>
 		</div>
-		</div>
-	</div>	
-	
+	</div>
+</div>
+
 
 </body>
 </html>

@@ -1,0 +1,17 @@
+﻿li{ list-style-type: none;
+    margin: 0 auto;}
+
+.dataChage
+{
+    width: 300px;
+    height: auto;
+    background-color: #009900;
+    margin : 0 auto;
+    text-align: center;
+}
+.dataChageContent{
+    width: 50px;
+    width: auto;
+    background-color: red;
+}
+/*asd*/
