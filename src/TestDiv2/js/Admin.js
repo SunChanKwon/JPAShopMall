@@ -1,8 +1,4 @@
-﻿$('#loginBtn').click(function () {
-    $('.loginModal').css('display', 'block');
-});
-
-$(()=>{
+﻿$(()=>{
     $('#Meunselect li').click(function(){
         var idx = $(this).index();
         $('#mypageTab li').removeClass('on');
@@ -11,16 +7,22 @@ $(()=>{
         $('#mypageTab>div').eq(idx).show();
     });
 });
-/*test*/
-function Memberchage(){
-    window.open('MemberChage.html', '네이버팝업', 'width=500px,height=600px,scrollbars=yes');
-}
 
-/*test*/
-function Memberchage(){
-    window.open('MemberChage.html', '네이버팝업', 'width=500px,height=600px,scrollbars=yes');
-}
-/*관리자 수정 model*/
-$('#loginBtn').click(function () {
-    $('.loginModal').css('display', 'block');
+
+$('.joinBtn').click(function () {
+    $('.loginJoinModal').css('display', 'block');
 });
+
+//오버레이영역 클릭시 모달창 닫기
+$('.modalOverlay').click(function () {
+    $('.loginJoinModal').css('display', 'none');
+});
+
+//약관동의창 취소버튼 동작
+$('#joinCancelBtn').click(function () {
+    $('.loginJoinModal').css('display', 'none');
+});
+
+function windowopen(){
+    win = window.open('AdminInsert.html');
+}

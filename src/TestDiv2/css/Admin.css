@@ -1,5 +1,20 @@
 @charset "UTF-8";
+.on{
+	font-size: 20px;
+}
+#onAdmin
+{
+	border-bottom: 1px solid black;
+}
+.AdminBar
+{
+	border-bottom: 1px solid black;
+}
 
+#Meunselect > #on
+{
+	font-size: 40px;
+}
 li{ list-style-type: none;
 	margin: 0 auto;}
 #mypageTab{
@@ -122,7 +137,8 @@ li{ list-style-type: none;
 	font-size: 24px;
 }
 
-/*------------------회원목록 css-------------------------*/
+/*------------------회원관리 css-------------------------*/
+
 .AdminMember
 {
 	width: 1000px;
@@ -141,18 +157,94 @@ li{ list-style-type: none;
 	width: 11%;
 	border-bottom: red 1px solid;
 	text-align: center;
+	background-color: #5294de;
 }
 #MemberList
 {
 	width: 100%;
 	height: 500px;
-	overflow-y: scroll;
+	border-bottom: black 1px solid;
+	background-color: #0e3775;
 }
+#MemberList >li
+ {
+	 font-size: 20px;
+ }
 .MemberSerchBox
 {
 	float: right;
 	margin: 0 auto;
 }
+/*페이징버튼 버튼*/
+.MemberListButtonBox
+{
+	margin: 0 auto;
+	width: 100%;
+	height: 55px;
+
+}
+.MemberListButton
+{
+	width: 100%;
+	height: 55px;
+}
+.MemberListButtonBox>ul>li
+{
+	margin: 0 auto;
+	float: left;
+	font-size: 15px;
+	padding-left: 80px;
+
+	text-align: center;}
+/*------------------신고 게시물 확인--------------------*/
+.AdminBoardView
+{
+	width: 1000px;
+	height: 750px;
+}
+
+.AdminBoardView >li,ul{
+	margin: 0;padding:0;list-style-type: none;
+}
+#BoardView>li{
+	float:left;
+	height: 90px;
+	width: 11%;
+	border-bottom: red 1px solid;
+	text-align: center;
+	background-color: #5294de;
+}
+#BoardView
+{
+	width: 100%;
+	height: 500px;
+	border-bottom: black 1px solid;
+	background-color: #009900;
+}
+.BoardViewImg
+{	width: 100px;
+	height: 90px;
+}
+#BoardView>li
+{
+	font-size: 20px;
+	width: 10%;
+}
+.BoardViewMenu
+{
+	height:10%; background-color: red
+}
+#BoardView>li:nth-of-type(6n+2){width: 15%;overflow: hidden; }
+#BoardView>li:nth-of-type(6n+3){width: 45%;  text-align:left;}
+
+#BoardView>li:nth-of-type(1){ height:10%; background-color: red}
+#BoardView>li:nth-of-type(2){ height:10%; background-color: red}
+#BoardView>li:nth-of-type(3){ height:10%; background-color: red}
+#BoardView>li:nth-of-type(4){ height:10%; background-color: red}
+#BoardView>li:nth-of-type(5){ height:10%; background-color: red}
+#BoardView>li:nth-of-type(6){ height:10%; background-color: red}
+
+
 /*------------------1:1문의--------------------*/
 .QnaButton>li
 {
@@ -168,20 +260,20 @@ li{ list-style-type: none;
 .QnaMainBox{
 	border: black 1px solid;
 	width: 800px;
-	height: 500px;
+	height: 600px;
 	float: left;
 }
 .QnaLeftButtonBox{
 	border: rebeccapurple 1px solid;
 	width: 300px;
-	height: 450px;
+	height: 500px;
 }
 
 .QnaLeftBox
 {
 	border: red 1px solid;
 	width: 300px;
-	height: 500px;
+	height: 600px;
 	float: left;
 }
 .QnaRightBox
@@ -214,7 +306,6 @@ li{ list-style-type: none;
 	margin: 0 auto;
 }/*처리결과 전송 */
 .QnaButtonBox
-.QnaButtonBox
 {
 	margin: 0 auto;
 	width: 100%;
@@ -226,6 +317,7 @@ li{ list-style-type: none;
 	width: 100%;
 	height: 55px;
 }
+.QnaButtonBox>ul>:nth-child(n){padding-left: 10px;}
 
 #QnaList>li
 {
@@ -276,7 +368,6 @@ li{ list-style-type: none;
 	float:left;
 	height: 40px;
 	width: 140px;
-	line-height:50px;
 	text-align: center;
 }
 
@@ -289,6 +380,10 @@ li{ list-style-type: none;
 	border: red 1px solid ;
 }
 #AdminList>li:nth-child(7n+4){width:27%;}
+
+#AdminList>input{
+	width: 10%;
+}
 
 pagination>li
 {
@@ -312,7 +407,12 @@ pagination>li
 
 .AdminListBox{
 	width: 100%;
-	height: 300px;
+	height: 50px;
 	border:red 1px solid;
 	overflow-y: scroll;
 }
+.Modaldiv>div,label
+{
+	float: left;
+}
+/*------*/

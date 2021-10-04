@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>index</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <style>
+<head>
+  <meta charset="utf-8">
+  <title>index</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <style>
 
-      .container
-      {
-        position: relative;
-        margin: 0px auto;
-        width: 1000px;
-        height: 600px;
-        background-color: pink;
-      }
-      li,ul{
-     list-style-type: none; }
-      .MainMeun{
-        float:left;
-        margin-right: 30px;
-        width: 160px;
-      }
-      .MainMeun>a{
-        border: red  solid 1px;
-      }
-      .subMeun>li
-      {
-        margin-top: 10px;
-        border: blue  solid 1px;
-      }
+    .container
+    {
+      position: relative;
+      margin: 0px auto;
+      width: 1000px;
+      height: 600px;
+      background-color: pink;
+    }
+    li,ul{
+      list-style-type: none; }
+    .MainMeun{
+      float:left;
+      margin-right: 30px;
+      width: 160px;
+    }
+    .MainMeun>a{
+      border: red  solid 1px;
+    }
+    .subMeun>li
+    {
+      margin-top: 10px;
+      border: blue  solid 1px;
+    }
 
-    </style>
-     <script>
+  </style>
+  <script>
 
-     </script>
-    <body>
-      <div class="container">
-        <img src="../img/img.jpg" style=" margin: 0px auto;">
-        <ul class="ulbar">
-          <li class="MainMeun"><a>OURTER</a>
-            <ul class="subMeun">
-              <li><a href="#">가디건</a></li>
-              <li><a href="#">자켓 & 점퍼</a></li>
-              <li><a href="#">베스트</a></li>
-              <li><a href="#">코트</a></li>
-              <li><a href="#">세일</a></li>
-            </ul>
-          </li>
-          <li class="MainMeun"><a>TOP</a>
-            <ul class="subMeun">
-              <li><a href="#">TEE</a></li>
-              <li><a href="#">Cami</a></li>
-              <li><a href="#">Knit,shirt & Blouse</a></li>
-              </ul>
-          </li>
-          <li class="MainMeun"><a>Dress</a>
-            <ul class="subMeun">
-              <li><a href="#">ALL</a></li>
-              <li><a href="#">바캉스룩</a></li>
-              <li><a href="#">Set</a></li>
-            </ul>
-          </li>
-          <li class="MainMeun"><a>Bottom</a>
-            <ul class="subMeun">
-              <li><a href="#">레깅스</a></li>
-              <li><a href="#">힐링루엘브</a></li>
-              <li><a href="#">히든벤딩시리즈</a></li>
-              <li><a href="#">스커트</a></li>
-              <li><a href="#">팬츠</a></li>
-            </ul>
-          </li>
-          <li class="MainMeun"><a>Summer</a>
-            <ul class="subMeun">
-              <li><a href="#">HOLI스웜웨어</a></li>
-              <li><a href="#">at 22 C</a></li>
-              <li><a href="#">바캉스룩</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
+  </script>
+<body>
+<div class="container">
+  <img src="../img/img.jpg" style=" margin: 0px auto;">
+  <ul class="ulbar">
+    <li class="MainMeun"><a>OURTER</a>
+      <ul class="subMeun">
+        <li><a href="#">가디건</a></li>
+        <li><a href="#">자켓 & 점퍼</a></li>
+        <li><a href="#">베스트</a></li>
+        <li><a href="#">코트</a></li>
+        <li><a href="#">세일</a></li>
+      </ul>
+    </li>
+    <li class="MainMeun"><a>TOP</a>
+      <ul class="subMeun">
+        <li><a href="#">TEE</a></li>
+        <li><a href="#">Cami</a></li>
+        <li><a href="#">Knit,shirt & Blouse</a></li>
+      </ul>
+    </li>
+    <li class="MainMeun"><a>Dress</a>
+      <ul class="subMeun">
+        <li><a href="#">ALL</a></li>
+        <li><a href="#">바캉스룩</a></li>
+        <li><a href="#">Set</a></li>
+      </ul>
+    </li>
+    <li class="MainMeun"><a>Bottom</a>
+      <ul class="subMeun">
+        <li><a href="#">레깅스</a></li>
+        <li><a href="#">힐링루엘브</a></li>
+        <li><a href="#">히든벤딩시리즈</a></li>
+        <li><a href="#">스커트</a></li>
+        <li><a href="#">팬츠</a></li>
+      </ul>
+    </li>
+    <li class="MainMeun"><a>Summer</a>
+      <ul class="subMeun">
+        <li><a href="#">HOLI스웜웨어</a></li>
+        <li><a href="#">at 22 C</a></li>
+        <li><a href="#">바캉스룩</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>
 
 
-      <script type="text/javascript">
-        $(".MainMeun ul li").hover(function(){
-          $(this).find("ul").stop().fadeToggle(100);
-        });
-      </script>
+<script type="text/javascript">
+  $(".MainMeun ul li").hover(function(){
+    $(this).find("ul").stop().fadeToggle(100);
+  });
+</script>
 </head>
-  </body>
+</body>
 </html>
