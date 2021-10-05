@@ -77,28 +77,28 @@
     		<div class="AdminInsert">
     			<div class="PaddingBox"></div>
     			<div class="AdminInsertBox">
-    				<form>
+    				<form method="post"onsubmit="return false;">
     					<ul style="text-align: center">
     						<li>아이디</li>
-    						<li><input type='text' name='M_UserId' id='M_UserId'/></li><BR>
+    						<li><input type='text' name='M_UserId'/></li><BR>
     						<li>비밀번호</li>
-    						<li><input type='text' name='M_UserId' id='M_USERPWD1'/></li><BR>
+    						<li><input type='text' name='M_UserId' /></li><BR>
     						<li>이름</li>
-    						<li><input type='text' name='M_USERNAME' id='M_USERNAME' /></li><BR>
+    						<li><input type='text' name='M_USERNAME'  /></li><BR>
     						<li>닉네임</li>
-    						<li><input type='text' name='M_NickName' id='M_NickName'/></li><BR>
+    						<li><input type='text' name='M_NickName' /></li><BR>
     						<li>이메일</li>
-    						<li><input type='text' name='M_EMAIL' id='M_EMAIL' /></li><BR>
+    						<li><input type='text' name='M_EMAIL' /></li><BR>
     						<li>전화번호</li>
-    						<li><input type='text' name='M_TEL' id='M_TEL' /></li><BR>
+    						<li><input type='text' name='M_TEL' /></li><BR>
     						<li>주소</li>
-    						<li><input type='text' name='M_ADDR' id='M_ADDR'/><BR>
+    						<li><input type='text' name='M_ADDR'/><BR>
     							<input type="button" name="ADDRES" ID="ADDRES" VALUE="주소 검색"/>
     						</li><BR>
     						<li>생일</li>
-    						<li><input type='date' name='M_BITH' id='M_BITH'/></li><BR>
+    						<li><input type='date' name='M_BITH' /></li><BR>
     						<li hidden>등급</li>
-    						<li><input type='text' name='M_Rank' id='M_Rank' value="관리자" hidden/></li>
+    						<li><input type='text' name='M_Rank'value="관리자" hidden/></li>
     						</li>
     						<br>
     						<li><input type='submit' value = '관리자 등록'></li>
@@ -115,7 +115,7 @@
     <!-- 약관동의 창 -->
     <article class="AdminMemberModal">
         <h2>회원 수정</h2>
-        <form method="post" action="#.html">
+        <form method="post" autocomplete="off" onsubmit="return false;">
             <div>
                 <label>아이디:</label>
                 <input class="ModalInput" type='text' name='M_UserId' id='M_UserId'disabled value="데이터들어갈곳"/>

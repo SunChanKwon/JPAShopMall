@@ -1,13 +1,18 @@
 ﻿$(()=>{
     $('#Meunselect li').click(function(){
-        var idx = $(this).index();
-        $('#mypageTab li').removeClass('on');
-        $('#mypageTab li').eq(idx).addClass('on');
-        $('#mypageTab>div').hide();
-        $('#mypageTab>div').eq(idx).show();
+        // var idx = $(this).index();
+        // $('#mypageTab li').removeClass('on');
+        // $('#mypageTab li').eq(idx).addClass('on');
+        // $('#mypageTab>div').hide();
+        // $('#mypageTab>div').eq(idx).show();
     });
 });
-
+$('.test1').click(function ()
+{
+    console.log("Asdsad");
+    $('.on').css('display','none');
+    $('.test').css('display','block');
+})
 
 $('.joinBtn').click(function () {
     $('.loginJoinModal').css('display', 'block');

@@ -29,11 +29,12 @@
 <br>
 <div id='mypageTab'><!--  전체 div -->
 	<ul id="Meunselect">
-		<li class='on' id='onAdmin'>ADMIN</li>
-		<li class="AdminBar">회원관리</li>
+		<li class='on' id='onAdmin' onclick="AdminMemberShow();">ADMIN</li>
+		<li class="test1">회원관리</li>
 		<li class="AdminBar">블럭처리게시판</li>
 		<li class="AdminBar">1:1 문의 확인</li>
 		<li class="AdminBar" onclick="windowopen()">관리자 관리</li>
+		<li class="AdminBar">추천 게시판</li>
 	</ul>
 	<div class='on'><!-- 메인 프로필 -->
 		<div class="AdminMainProfile">
@@ -52,17 +53,17 @@
 	</div>
 	<!----------->
 
-	<div><!--회원목록-->
+	<div class="test"><!--회원목록-->
 		<div class="AdminMember">
 			<div class="PaddingBox"></div>
 			<div class="MemberSerchBox">
-				<form>
+				<form action="#" method="post">
 					<select name="MemberSelect" id="MemberSelect">
 						<option value="이름">이름</option>
 						<option value="아이디">아이디</option>
 					</select>
 					<input type="text" id="MemberSerch" name="MemberSerch">
-					<input type="submit" value="찾기" onclick=""/>
+					<input type="submit" value="찾기"/>
 				</form>
 			</div>
 			<br>
@@ -196,11 +197,6 @@
 			<li><a href="#" class="joinBtn"/>관리</a></li>
 			<br>
 
-
-
-
-
-
 		</ul>
 		<div class="MemberListButtonBox">
 			<ul class="MemberListButton"ㄴ>
@@ -304,7 +300,7 @@
 		<div class="AdminMemberUpdate">
 			<div class="PaddingBox"></div>
 			<div class="AmdinSerchMemberBox">
-				<form>
+				<form method="post" action="#" autocomplete="off">
 					<select name="AdminSelect" id="AdminSelect">
 					<option value="이름">이름</option>
 					<option value="아이디">아이디</option>
@@ -323,6 +319,7 @@
 				<li>가입일자</li>
 				<li> 관리 </li>
 				<br>
+
 				<li>50</li>
 				<li>ksc7662</li>
 				<li>권순찬</li>
@@ -341,7 +338,97 @@
 		</div>
 	</div>
 
-	<div><!-- 관리자 만들기 -->
+	<div class="SuggestBoardView"><!--신고 게시물 확인-->
+	<div class="PaddingBox"></div>
+	<div>검색창 들어갈 자리입니다.</div>
+	<hr>
+	<ul id="SuggestView">
+		<!-- 데이터내용-->
+		<li>100</li>
+		<li><img class="SuggestViewImg" src="img/smile.png"/></li>
+		<li><br></bt>태그:ㅁㄴㅇㅁㄴㅇㄴㅁㅇ<br>
+			날짜 2021-02-21</li>
+		<li>권순찬</li>
+		<li>닉네임</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<br>
+
+		<!-- 데이터내용-->
+		<li>100</li>
+		<li><img class="SuggestViewImg" src="img/smile.png"/></li>
+		<li><br></bt>태그:ㅁㄴㅇㅁㄴㅇㄴㅁㅇ<br>
+			날짜 2021-02-21</li>
+		<li>권순찬</li>
+		<li>닉네임</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<br>
+
+		<!-- 데이터내용-->
+		<li>100</li>
+		<li><img class="SuggestViewImg" src="img/smile.png"/></li>
+		<li><br></bt>태그:ㅁㄴㅇㅁㄴㅇㄴㅁㅇ<br>
+			날짜 2021-02-21</li>
+		<li>권순찬</li>
+		<li>닉네임</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<br>
+
+		<!-- 데이터내용-->
+		<li>100</li>
+		<li><img class="SuggestViewImg" src="img/smile.png"/></li>
+		<li><br></bt>태그:ㅁㄴㅇㅁㄴㅇㄴㅁㅇ<br>
+			날짜 2021-02-21</li>
+		<li>권순찬</li>
+		<li>닉네임</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<br>
+
+
+		<!-- 데이터내용-->
+		<li>100</li>
+		<li><img class="SuggestViewImg" src="img/smile.png"/></li>
+		<li><br></bt>태그:ㅁㄴㅇㅁㄴㅇㄴㅁㅇ<br>
+			날짜 2021-02-21</li>
+		<li>권순찬</li>
+		<li>닉네임</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/good.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<li><img class="SuggestCallimg" src="img/talk.png"/> 100</li>
+		<br>
+
+
+	</ul>
+	<div class="SuggestListButtonBox">
+		<ul class="SuggestListButton">
+			<li><a href="#"><</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">6</a></li>
+			<li><a href="#">7</a></li>
+			<li><a href="#">8</a></li>
+			<li>></li>
+		</ul>
+	</div>
+		<div style="float: right"><a href="AdminInsert.html">글쓰기</a> </div>
+</div>
+
+	<!-- 관리자 만들기 -->
 <!--		<div class="AdminInsert">-->
 <!--			<div class="PaddingBox"></div>-->
 <!--			<div class="AdminInsertBox">-->
@@ -375,7 +462,9 @@
 <!--			</div>-->
 <!--		</div>-->
 	</div>
-</div>
+
+
+
 
 <!-- 모달창... -->
 <div class="loginJoinModal" id="AdminMemberModal">
@@ -383,7 +472,7 @@
 	<!-- 약관동의 창 -->
 	<article class="AdminMemberModal">
 		<h2>회원 수정</h2>
-		<form method="post" action="#.html">
+		<form method="post" action="#">
 		<div>
 			<label>아이디:</label>
 			<input class="ModalInput" type='text' name='M_UserId' id='M_UserId'disabled value="데이터들어갈곳"/>
@@ -446,10 +535,8 @@
 		<br>
 
 		<div class="">
-			<button type="submit" id="joinCancelBtn" class="btnBlock"><a>수정</a></button>
+			<button type="submit" id="joinCancelBtn"  class="btnBlock"><a>수정</a></button>
 		</div>
-		<br>
-
 		</form>
 	</article>
 </div>
