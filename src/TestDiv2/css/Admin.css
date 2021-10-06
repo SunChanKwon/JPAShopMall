@@ -350,10 +350,7 @@ li{ list-style-type: none;
 	width: 20%;
 	height: 20%;
 }
-.test
-{
-	display: none;
-}
+
 /*------------------관리자 관리--------------------*/
 .AdminMemberUpdate{
 	display: none;

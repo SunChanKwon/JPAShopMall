@@ -15,17 +15,17 @@ $('.test1').click(function ()
 })
 
 $('.joinBtn').click(function () {
-    $('.loginJoinModal').css('display', 'block');
+    $('.MemberChageModal').css('display', 'block');
 });
 
 //오버레이영역 클릭시 모달창 닫기
 $('.modalOverlay').click(function () {
-    $('.loginJoinModal').css('display', 'none');
+    $('.MemberChageModal').css('display', 'none');
 });
 
 //약관동의창 취소버튼 동작
 $('#joinCancelBtn').click(function () {
-    $('.loginJoinModal').css('display', 'none');
+    $('.MemberChageModal').css('display', 'none');
 });
 
 function windowopen(){

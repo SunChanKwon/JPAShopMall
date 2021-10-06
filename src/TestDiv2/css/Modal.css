@@ -4,7 +4,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 
 /*모달창*/
-.loginJoinModal {
+.MemberChageModal {
   display: none;
   position: fixed;
   top: 0;
