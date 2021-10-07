@@ -1,0 +1,19 @@
+﻿.SubBoxContent
+{
+    width:1300px; min-height: 40px; margin: 0 auto;
+}
+.SubContent
+{
+    font-size: 40px; border-bottom: 1px solid wheat;
+}
+
+.BarMeunSelect{
+    list-style-type: none;
+    width: 10%;
+    min-height: 800px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    background-color: #fafafa;
+}
+

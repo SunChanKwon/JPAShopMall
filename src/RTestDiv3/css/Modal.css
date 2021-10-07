@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+/*모달창*/
+.MemberChageModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+}
+
+
+/* 모달창 배경 */
+.modalOverlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow-y: auto;
+  position: fixed;
+}
+
+.AdminMemberModal {
+  position: relative;
+  margin: 100px auto;
+  width: 450px;
+  padding: 20px;
+  background-color: #fafafa;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #666;
+  overflow-y: auto;
+  background-color: white;
+}
+
+/* 약관 취소,다음 버튼 스타일 */
+.btnBlock {
+  width: 49%;
+  height: 48px;
+  line-height: 46px;
+  padding: 0;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  background-color: navy;
+}
+
+.ModalInput
+{
+  width:200px;
+  height: 50px;
+  text-align: left;
+}
+.Modalselect
+{
+  width:200px;
+  height: 50px;
+  text-align: center;
+}
+label
+{
+  font-size: 20px;
+  width: 100px;
+  height: 20px;
+}

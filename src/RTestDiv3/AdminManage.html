@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .MeunSelect{
+      list-style-type: none;
+      background-color: #009900;
+      width: 10%;
+      min-height: 800px;
+      padding: 0;
+      margin: 0;
+      float: left;
+      font-size: 15px;
+    }
+    .MeunSelect>li
+    {
+      margin-left: 10px;
+      text-align: left;
+      margin-top: 10px;
+    }
+    .MeunPadding
+    {
+      height: 150px;
+      font-family: "Malgun Gothic", "굴림", "Gulim", "Arial";
+      text-align: center;
+      font-size:30px;
+    }
+    /*------------------------------------*bar Meun css/
+
+  </style>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <div style="width:1300px; min-height: 800px; margin: 0 auto; background-color:white;">
+
+    <ul class="MeunSelect">
+      <div class="MeunPadding"><a href="html/MainAdmin.html">ADMIN</a></div>
+      <li><a href="html/AdminMember.html">회원관리</a></li>
+      <li><a href="AdminBoardView.html">블럭처리 관리</a></li>
+      <li><a href="#">1:1문의 확인</a></li>
+      <li><a href="AdminManage.html">관리자 관리</a></li>
+      <li><a href="#">추천게시판</a></li>
+    </ul>
+    <div style=" min-height: 800px; width:90%; background-color: red; float: left;">
+      <ul id="Meunselect">
+        <li class='on' id="onAdmin">관리자 관리</li>
+        <li>관리자 추가하기</li>
+      </ul>
+      <div class= "on"><!-- 관리자관리 -->
+        <div class="AdminMemberUpdate">
+          <div class="PaddingBox"></div>
+          <div class="AmdinSerchMemberBox">
+            <form>
+              <select name="AdminSelect" id="AdminSelect">
+                <option value="이름">이름</option>
+                <option value="아이디">아이디</option>
+              </select>
+              <input type="text" id="AdminSerch" name="AdminSerch">
+              <input type="submit" value="찾기" onclick=""/>
+            </form>
+          </div>
+          <br>
+          <br>
+          <ul id="AdminList">
+            <li>회원번호</li>
+            <li>아이디</li>
+            <li>이름</li>
+            <li>이메일</li>
+            <li>가입일자</li>
+            <li> 관리 </li>
+            <br>
+            <li>50</li>
+            <li>ksc7662</li>
+            <li>권순찬</li>
+            <li>ksc7662@naver.com</li>
+            <li>12</li>
+            <li><a href="#" class="joinBtn">관리자보기</a></li>
+            <br>
+            <li>50</li>
+            <li>ksc7662</li>
+            <li>권순찬</li>
+            <li>ksc7662@naver.com</li>
+            <li>12</li>
+            <li><a href="#" class="joinBtn">관리자보기</a></li>
+            <br>
+          </ul>
+        </div>
+    </div>
+  </div>
+</head>
+<body>
+
+</body>
+</html>
