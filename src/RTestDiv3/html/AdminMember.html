@@ -3,62 +3,51 @@
 <head>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script defer type="text/javascript" src="../js/Admin.js"></script>
-  <link rel="stylesheet" href="../css/Admin.css" type="text/css"/>
+
   <link rel="stylesheet" href="../css/AdminBar.css" type="text/css"/>
 
 
-  <div class="SubBoxContent">
-    <div class="SubContent">회원관리</div>
+  <div class="TopContent">
+    <div class="TopSubContent">회원관리</div>
   </div>
-  <div style="width:1300px; min-height: 800px; margin: 0 auto; background-color:white;">
+  <div class="MainContent">
     <div class="BarMeunSelect">
-      <div style="border: 1px solid blanchedalmond; width: 120px;  margin: 0 auto; font-size: 25px; text-align: center;">회원
+      <div class="BarMeun">회원
         <hr>
-        <div style="font-size: 15px;">유저관리</div>
-        <div style="font-size: 15px;">관리자관리</div>
-        <div style="font-size: 15px;">관리자추가</div>
+        <div>유저관리</div>
+        <div>관리자관리</div>
+        <div>관리자추가</div>
       </div>
       <br>
-
-      <div style="border: 1px solid blanchedalmond; width: 120px;  margin: 0 auto; font-size: 25px; text-align: center;">게시판
+      <div class="BarMeun">게시판
         <hr>
-        <div style="font-size: 15px;">모든 게시판</div>
-        <div style="font-size: 15px;">신고 게시판</div>
-        <div style="font-size: 15px;">블럭 게시판</div>
+        <div>모든 게시판</div>
+        <div>신고 게시판</div>
+        <div>블럭 게시판</div>
       </div>
       <br>
-
-      <div style="border: 1px solid blanchedalmond; width: 120px;  margin: 0 auto; font-size: 25px; text-align: center;">문의
+      <div class="BarMeun">문의
         <hr>
-        <div style="font-size: 15px;">1:1 문의</div>
+        <div>1:1 문의</div>
       </div>
     </div>
 
-    <div style=" min-height: 800px; width:90%; float: left; ">
-      <div class="AdminMember">
-        <div style="height: 100%; width: 1170px;">
-
-
-        <div class="MemberSerchBox">
-          <form action="#" method="post">
+    <div class="MainConTentBox">
+      <div class="SerchBox">
+        현재 회원수:
+          <form style="float: right" action="#" method="post">
             <select name="MemberSelect" id="MemberSelect">
               <option value="이름">이름</option>
               <option value="아이디">아이디</option>
             </select>
-            <input type="text" id="MemberSerch" name="MemberSerch">
-            <input type="submit" value="찾기"/>
+            <input class=inputSerach" type="text" id="MemberSerch" name="MemberSerch">
+            <input style="height: 35px;" type="submit" value="검색하기"/>
           </form>
+      </div>
 
-        </div>
-        <br>
-        <br>
-
+      <div style=" background-color: blanchedalmond; width:100%; height: 90%;">
         <ul id="MemberList">
           <li>순번</li>
           <li>아이디</li>
@@ -137,9 +126,99 @@
           <li><a href="#" class="joinBtn"/>회원 관리</a></li>
           <br>
 
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <br>
+
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <br>
+
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <br>
+
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <br>
+
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <br>
+
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <br>
+
+
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <br>
+
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <br>
+
+
         </ul>
         <div class="MemberListButtonBox">
-          <ul class="MemberListButton"ㄴ>
+          <ul class="MemberListButton">
             <li><a href="#"><</a></li>
             <li><a href="#">1</a></li>
             <li><a href="#">2</a></li>
@@ -149,9 +228,13 @@
             <li><a href="#">6</a></li>
             <li><a href="#">7</a></li>
             <li><a href="#">8</a></li>
-            <li><a href="#">9</a></li>
             <li>></li>
           </ul>
+
+      </div>
+        <br>
+
+
         </div>
       </div>
       </div>
@@ -210,7 +293,7 @@
         <br>
 
         <div>
-          <label class="Modallabel"> 활동상태:</label>
+          <label class="Modallabel"> 회원등급:</label>
           <select class="Modalselect" name="M_rank" id="M_rank" value="골드(현재데이터들어갈곳)">
             <option value="골드">골드</option>
             <option value="실버">실버</option>
