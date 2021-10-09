@@ -8,45 +8,20 @@
 
   <link rel="stylesheet" href="../css/AdminBar.css" type="text/css"/>
 
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#header").load("include.html")
+    });
+  </script>
+
+  <div id="header"></div>
+
 
   <div class="TopContent">
     <div class="TopSubContent">회원관리</div>
   </div>
   <div class="MainContent">
-    <div class="BarMeunSelect">
-      <div class="BarMeun">회원
-        <hr>
-        <div>유저관리</div>
-        <div>관리자관리</div>
-        <div>관리자추가</div>
-      </div>
-      <br>
-      <div class="BarMeun">게시판
-        <hr>
-        <div>모든 게시판</div>
-        <div>신고 게시판</div>
-        <div>블럭 게시판</div>
-      </div>
-      <br>
-      <div class="BarMeun">문의
-        <hr>
-        <div>1:1 문의</div>
-      </div>
-    </div>
-
-    <div class="MainConTentBox">
-      <div class="SerchBox">
-        현재 회원수:
-          <form style="float: right" action="#" method="post">
-            <select name="MemberSelect" id="MemberSelect">
-              <option value="이름">이름</option>
-              <option value="아이디">아이디</option>
-            </select>
-            <input class=inputSerach" type="text" id="MemberSerch" name="MemberSerch">
-            <input style="height: 35px;" type="submit" value="검색하기"/>
-          </form>
-      </div>
-
       <div style=" background-color: blanchedalmond; width:100%; height: 90%;">
         <ul id="MemberList">
           <li>순번</li>

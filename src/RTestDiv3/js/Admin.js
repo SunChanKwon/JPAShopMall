@@ -9,3 +9,5 @@ $('.modalOverlay').click(function () {
 $('#joinCancelBtn').click(function () {
     $('.AdminInsertModal').css('display', 'none');
 });
+
+

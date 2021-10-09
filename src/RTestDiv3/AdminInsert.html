@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="text/css" rel="stylesheet" href="../css/AdminBar.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#header").load("include.html")
+    });
+  </script>
+  <meta charset="UTF-8">
+
+
+  <div id="header"></div>
+
+  <div class="MainContent">
+      <div><!-- 관리자 만들기 -->
+        <div class="AdminInsert">
+          <div class="AdminInsertBox">
+            <form>
+              <ul style="text-align: center">
+                <li>아이디</li>
+                <li><input type='text' name='M_UserId' id='M_UserId'/></li><BR>
+                <li>비밀번호</li>
+                <li><input type='text' name='M_UserId' id='M_USERPWD1'/></li><BR>
+                <li>이름</li>
+                <li><input type='text' name='M_USERNAME' id='M_USERNAME' /></li><BR>
+                <li>닉네임</li>
+                <li><input type='text' name='M_NickName' id='M_NickName'/></li><BR>
+                <li>이메일</li>
+                <li><input type='text' name='M_EMAIL' id='M_EMAIL' /></li><BR>
+                <li>전화번호</li>
+                <li><input type='text' name='M_TEL' id='M_TEL' /></li><BR>
+                <li>주소</li>
+                <li><input type='text' name='M_ADDR' id='M_ADDR'/><BR>
+                  <input type="button" name="ADDRES" ID="ADDRES" VALUE="주소 검색"/>
+                </li><BR>
+                <li>생일</li>
+                <li><input type='date' name='M_BITH' id='M_BITH'/></li><BR>
+                <li hidden>등급</li>
+                <li><input type='text' name='M_Rank' id='M_Rank' value="관리자" hidden/></li>
+                </li>
+                <br>
+                <li><input type='submit' value = '관리자 등록'></li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  <!-- 모달창... -->
+  <!-- 모달창... -->
+  <div class="AdminInsertModal">
+    <div class="modalOverlay"></div>
+    <!-- 약관동의 창 -->
+    <article class="AdminMemberModal">
+      <h2>회원 수정</h2>
+      <form method="post" action="#">
+        <div>
+          <label class="Modallabel"> 아이디:</label>
+          <input class="ModalInput" type='text' name='M_UserId' id='M_UserId'disabled value="데이터들어갈곳"/>
+        </div>
+        <br>
+        <div>
+          <label class="Modallabel">이름:</label>
+          <input class="ModalInput" type='text' name='M_USERNAME' id='M_USERNAME' value="데이터들어갈곳"disabled/>
+        </div>
+
+        <br>
+        <div>
+          <label class="Modallabel">닉네임:</label>
+          <input class="ModalInput" type='text' name='M_NickName' id='M_NickName' value="데이터들어갈곳"disabled/>
+        </div>
+        <br>
+
+        <div>
+          <label class="Modallabel"> 전화번호:</label>
+          <input class="ModalInput" type='text' name='M_TEL' id='M_TEL' value="데이터들어갈곳"/>
+        </div>
+        <br>
+
+        <div>
+          <label class="Modallabel"> 주소:</label>
+          <input class="ModalInput" type='text' name='M_ADDR' id='M_ADDR' value="데이터들어갈곳" />
+        </div>
+        <br>
+
+        <div>
+          <label class="Modallabel"> 생일:</label>
+          <input class="ModalInput" type='date' name='M_BITH' id='M_BITH' value="2021-02-21" />
+        </div>
+        <br>
+
+        <div>
+          <label class="Modallabel"> 활동상태:</label>
+          <select class="Modalselect" name="M_StateCode" id="M_StateCode" value="양호(현재데이터들어갈곳)">
+            <option value="정지">양호</option>
+            <option value="양호">정지</option>
+          </select>
+        </div>
+        <br>
+
+        <div>
+          <label class="Modallabel"> 회원등급:</label>
+          <select class="Modalselect" name="M_rank" id="M_rank" value="골드(현재데이터들어갈곳)">
+            <option value="골드">골드</option>
+            <option value="실버">실버</option>
+            <option value="브론즈">브론즈</option>
+            <option value="관리자">관리자</option>
+          </select>
+        </div>
+        <br>
+
+        <div>
+          <label class="Modallabel">가입일자:</label>
+          <input class="ModalInput" name='M_REGDATE' id='M_REGDATE' value="데이터들어갈곳" disabled/>
+        </div>
+        <br>
+
+        <div class="">
+          <button type="submit" id="joinCancelBtn"  class="btnBlock"><a>수정</a></button>
+        </div>
+      </form>
+    </article>
+  </div>
+
+
+</head>
+<body>
+
+</body>
+</html>
