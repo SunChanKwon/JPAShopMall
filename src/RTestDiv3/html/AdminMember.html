@@ -1,12 +1,58 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <style>
+    #MemberList {
+      width: 95%;
+      height: 600px;
+    }
 
+    /*페이징버튼 버튼*/
+    #MemberList > li {
+      float: left;
+      height: 40px;
+      width: 11%;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .MemberListButtonBox>ul>:nth-child(n){padding-left: 10px;}
+
+    .MemberListButton
+    {
+      width: 100%;
+      height: 55px;
+    }
+
+    .MemberListButton>li
+    {
+      float: left;
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      margin-left: 60px;
+    }
+
+    #MemberList > li:nth-of-type(9n+1) {
+      width: 5%;
+    }
+
+    #MemberList > li:nth-of-type(9n+2) {
+      width: 14%;
+    }
+
+    #MemberList > li:nth-of-type(9n+4) {
+      width: 15%;
+    }
+
+  </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script defer type="text/javascript" src="../js/Admin.js"></script>
 
   <link rel="stylesheet" href="../css/AdminBar.css" type="text/css"/>
+  <link rel="stylesheet" href="../css/Modal.css" type="text/css"/>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
@@ -19,8 +65,22 @@
 
 
   <div class="TopContent">
-    <div class="TopSubContent">회원관리</div>
+    <div class="TopSubContent">
+      <div>회원관리</div>
+
+    <div style="text-align: right; ">
+    <form action="#" method="post">
+      <select name="MemberSelect" id="MemberSelect">
+        <option value="이름">이름</option>
+        <option value="아이디">아이디</option>
+      </select>
+      <input type="text" id="MemberSerch" name="MemberSerch">
+      <input type="submit" value="찾기"/>
+    </form>
+    </div>
+
   </div>
+
   <div class="MainContent">
       <div style=" background-color: blanchedalmond; width:100%; height: 90%;">
         <ul id="MemberList">
@@ -43,7 +103,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -54,7 +114,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -65,7 +125,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -76,7 +136,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -87,7 +147,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -98,7 +158,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -109,7 +169,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -120,7 +180,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -131,7 +191,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -142,7 +202,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -153,7 +213,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -164,7 +224,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
 
@@ -176,7 +236,7 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
           <li>1</li>
@@ -187,42 +247,64 @@
           <li>양호</li>
           <li>골드</li>
           <li>4.5</li>
-          <li><a href="#" class="joinBtn"/>회원 관리</a></li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
           <br>
 
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
+          <br>
+
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
+          <br>
+          <li>1</li>
+          <li>ksc7662</li>
+          <li>권순찬</li>
+          <li>권순찬11</li>
+          <li>12</li>
+          <li>양호</li>
+          <li>골드</li>
+          <li>4.5</li>
+          <li><a href="#" class="AdminMember"/>회원 관리</a></li>
+          <br>
 
         </ul>
-        <div class="MemberListButtonBox">
-          <ul class="MemberListButton">
-            <li><a href="#"><</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-            <li>></li>
-          </ul>
-
       </div>
-        <br>
-
-
-        </div>
-      </div>
-      </div>
+    <div class="MemberListButtonBox">
+      <ul class="MemberListButton">
+        <li><a href="#"><</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">></a></li>
+      </ul>
     </div>
+  </div>
   </div>
 
   <!-- 모달창... -->
   <div class="AdminInsertModal">
     <div class="modalOverlay"></div>
-    <!-- 약관동의 창 -->
     <article class="AdminMemberModal">
       <h2>회원 수정</h2>
-      <form method="post" action="#">
+      <form method="get" action="#">
         <div>
           <label class="Modallabel"> 아이디:</label>
           <input class="ModalInput" type='text' name='M_UserId' id='M_UserId'disabled value="데이터들어갈곳"/>

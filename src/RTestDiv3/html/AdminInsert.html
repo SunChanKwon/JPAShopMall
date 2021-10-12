@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    /*페이징버튼 버튼*/
+    #MemberList > li {
+      float: left;
+      height: 40px;
+      width: 11%;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .MemberListButtonBox>ul>:nth-child(n){padding-left: 10px;}
+
+    .MemberListButton>li
+    {
+      float: left;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      margin-left: 60px;
+    }
+
+    #MemberList > li:nth-of-type(9n+1) {
+      width: 5%;
+    }
+
+    #MemberList > li:nth-of-type(9n+2) {
+      width: 14%;
+    }
+
+    #MemberList > li:nth-of-type(9n+4) {
+      width: 15%;
+    }
+
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script defer type="text/javascript" src="../js/Admin.js"></script>
+
+  <link rel="stylesheet" href="../css/AdminBar.css" type="text/css"/>
+  <link rel="stylesheet" href="../css/Modal.css" type="text/css"/>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#header").load("include.html")
+    });
+  </script>
+
+  <script>
+    $(function(){
+      $('#M_USERPWD').keyup(function(){
+        $('div[name=check]').text('');
+        $('.submitbutton').css('visibility','hidden');
+      });
+
+      $('#M_USERPWDCheck').keyup(function(){
+        if($('#M_USERPWD').val()!=$('#M_USERPWDCheck').val()){
+          $('div[name=check]').text('');
+          $('div[name=check]').html("암호틀림");
+          $('.submitbutton').css('visibility','hidden');
+        }
+        else{
+          $('div[name=check]').text('');
+          $('div[name=check]').html("암호맞음");
+          $('.submitbutton').css('visibility','visible');
+        }
+
+      });
+    });
+  </script>
+
+  <div id="header"></div>
+
+
+  <div class="TopContent">
+    <div class="TopSubContent">
+      <div>어드민 추가하기</div>
+  </div>
+
+  <div class="MainContent">
+      <div style=" background-color: blanchedalmond; width:100%; height: 90%;">
+        <div style="background-color: mediumvioletred; width:50%; height: 100%; float: left;">
+          <img style="margin-top: 200px;"src="../img/testadmin.png">
+        </div>
+        <div style=" width:50%; height: 100%; float: left;">
+          <form method="post" action="test.jsp">
+            <div>
+              <label class="Modallabel">이름:</label>
+              <input class="ModalInput" type='text' name='M_USERNAME' id='M_USERNAME' placeholder="이름"/>
+            </div>
+
+            <br>
+
+            <div>
+              <label class="Modallabel">비밀번호:</label>
+              <input class="ModalInput" type='password' name='M_USERPWD' id="M_USERPWD" placeholder="비밀번호"/>
+              <input style="margin-left: 100px;"class="ModalInput" type='password'name='M_USERPWDCheck' id="M_USERPWDCheck" placeholder="비밀번호 확인"/><br>
+              <div name="check" size="2" color="red"></div>
+            </div>
+            <br>
+
+            <div>
+              <label class="Modallabel">닉네임:</label>
+              <input class="ModalInput" type='text' name='M_NickName' placeholder="닉네임"/>
+            </div>
+            <br>
+
+            <div>
+              <label class="Modallabel"> 이메일:</label>
+              <input class="ModalInput" type='text' name='M_EMAIL' placeholder="이메일"/>
+            </div>
+            <br>
+
+            <div>
+              <label class="Modallabel"> 전화번호:</label>
+              <input class="ModalInput" type='text' name='M_TEL' placeholder="전화번호"/>
+            </div>
+            <br>
+
+            <div>
+              <label class="Modallabel"> 주소:</label>
+              <input class="ModalInput" type='text' name='M_ADDR' placeholder="주소"  />
+            </div>
+            <br>
+
+            <div>
+              <label class="Modallabel"> 생일:</label>
+              <input class="ModalInput" type='date' name='M_BITH' placeholder="생일"/>
+            </div>
+            <br>
+
+            <div>
+              <label style="display: none"class="Modallabel"> 활동상태:</label>
+              <select style="display: none" class="Modalselect" name="M_StateCode" value="양호(현재데이터들어갈곳)">
+                <option value="정지">양호</option>
+              </select>
+            </div>
+            <br>
+
+            <div>
+              <label style="display: none" class="Modallabel"> 회원등급:</label>
+              <select style="display: none" class="Modalselect" name="M_rank">
+                <option value="관리자">관리자</option>
+              </select>
+            </div>
+            <br>
+
+            <div>
+              <button class="submitbutton" type="submit"><a>회원가입</a></button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+  </div>
+
+<!--  &lt;!&ndash; 모달창... &ndash;&gt;-->
+<!--  <div class="AdminInsertModal2">-->
+<!--    <div class="modalOverlay"></div>-->
+<!--    <article class="AdminMemberModal2">-->
+<!--      <h2>회원 수정</h2>-->
+<!--      <form method="get" action="#">-->
+<!--        <div>-->
+<!--          <label class="Modallabel"> 아이디:</label>-->
+<!--          <input class="ModalInput" type='text' name='M_UserId' id='M_UserId'disabled value="데이터들어갈곳"/>-->
+<!--        </div>-->
+<!--        <br>-->
+<!--        <div>-->
+<!--          <label class="Modallabel">이름:</label>-->
+<!--          <input class="ModalInput" type='text' name='M_USERNAME' id='M_USERNAME' value="데이터들어갈곳"disabled/>-->
+<!--        </div>-->
+
+<!--        <br>-->
+<!--        <div>-->
+<!--         <label class="Modallabel">닉네임:</label>-->
+<!--         <input class="ModalInput" type='text' name='M_NickName' id='M_NickName' value="데이터들어갈곳"disabled/>-->
+<!--        </div>-->
+<!--        <br>-->
+
+<!--        <div>-->
+<!--          <label class="Modallabel"> 전화번호:</label>-->
+<!--          <input class="ModalInput" type='text' name='M_TEL' id='M_TEL' value="데이터들어갈곳"/>-->
+<!--        </div>-->
+<!--        <br>-->
+
+<!--        <div>-->
+<!--          <label class="Modallabel"> 주소:</label>-->
+<!--          <input class="ModalInput" type='text' name='M_ADDR' id='M_ADDR' value="데이터들어갈곳" />-->
+<!--        </div>-->
+<!--        <br>-->
+
+<!--        <div>-->
+<!--          <label class="Modallabel"> 생일:</label>-->
+<!--          <input class="ModalInput" type='date' name='M_BITH' id='M_BITH' value="2021-02-21" />-->
+<!--        </div>-->
+<!--        <br>-->
+
+<!--        <div>-->
+<!--          <label class="Modallabel"> 활동상태:</label>-->
+<!--          <select class="Modalselect" name="M_StateCode" id="M_StateCode" value="양호(현재데이터들어갈곳)">-->
+<!--            <option value="정지">양호</option>-->
+<!--            <option value="양호">정지</option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--        <br>-->
+
+<!--        <div>-->
+<!--          <label class="Modallabel"> 회원등급:</label>-->
+<!--          <select class="Modalselect" name="M_rank" id="M_rank" value="골드(현재데이터들어갈곳)">-->
+<!--            <option value="골드">골드</option>-->
+<!--            <option value="실버">실버</option>-->
+<!--            <option value="브론즈">브론즈</option>-->
+<!--            <option value="관리자">관리자</option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--        <br>-->
+
+<!--        <div>-->
+<!--          <label class="Modallabel">가입일자:</label>-->
+<!--          <input class="ModalInput" name='M_REGDATE' id='M_REGDATE' value="데이터들어갈곳" disabled/>-->
+<!--        </div>-->
+<!--        <br>-->
+
+<!--        <div class="">-->
+<!--          <button type="submit" id="joinCancelBtn"  class="btnBlock"><a>수정</a></button>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </article>-->
+<!--  </div>-->
+
+</head>
+<body>
+
+</body>
+</html>

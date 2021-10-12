@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /*------------------------------------*bar Meun css*/
+    #QnaList > li:nth-of-type(4n+1) {
+
+      width: 10%;
+    }
+    #QnaList > li:nth-of-type(4n+2) {
+
+      overflow: hidden;
+
+      width: 50%;
+    }
+
+    #QnaList > li:nth-of-type(4n+3) {
+
+      width: 20%;
+    }
+
+    #QnaList > li:nth-of-type(4n+4) {
+
+      width: 20%;
+    }
+
+    .AdminQnqModal > form > div
+    {
+
+      font-size: 20px;
+    }
+    .DivPadding
+    {
+      height: 50px;
+      background-color: red;
+    }
+
+    .QnaButton>li
+    {
+      float: left;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      margin-left: 60px;
+    }
+    .QnaRightBox
+    {
+      width: 100%;
+      height: 600px;
+    }
+    .QnaButton
+    {
+      width: 100%;
+      height: 55px;
+    }
+    .QnaButtonBox>ul>:nth-child(n){padding-left: 10px;}
+
+    #QnaList>li
+    {
+      float:left;
+      height: 50px;
+      width: 100px;
+      line-height:50px;
+      text-align: center;
+      font-size: 15px;
+    }
+    .QnaDataBox>li{
+      margin: 0 auto;
+    }
+    .QnaBoardContent
+    {
+      height: 600px;
+      width: 100%;
+      border:  1px solid red;
+      margin: 0 auto;
+      margin: 0 auto;
+    }
+  </style>
+  <link type="text/css" rel="stylesheet" href="../css/AdminBar.css">
+  <link type="text/css" rel="stylesheet" href="../css/Modal.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script defer type="text/javascript" src="../js/Admin.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#header").load("include.html")
+    });
+  </script>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <div id="header"></div>
+
+  <div class="TopContent">
+    <div class="TopSubContent">
+      <div>
+        <div>1:1 문의확인</div>
+       </div>
+    </div>
+
+  </div>
+
+<!--  select MEG_CONTENT,MEG_DATE, m.M_USERNAME 보낸사람, mm.m_username 받는사람-->
+<!--  from MESSAGE me  join Member m on me.m_send=m.m_seq join Member mm on me.m_recive=mm.m_seq and me.MEG_SEQ=2;-->
+
+<!--  -->
+  <div class="MainContent">
+    <div style=" background-color: blanchedalmond; width:100%; height: 90%;">
+      <div style=" margin-left:600px;text-align: right; display: inline-block; font-size: 20px;">처리중인 문의</div>
+      <div style="margin-left:100px; text-align: right; display: inline-block; font-size: 20px;">처리 완료</div>
+
+      <div class="QnaRightBox">
+      <br>
+      <div class="QnaBoardContent">
+        <ul id="QnaList">
+          <li>NO</li>
+          <li>문의내용</li>
+          <li>문의자</li>
+          <li>상태</li>
+
+          <li>1</li>
+          <li> </li>
+          <li>권순찬</li>
+          <li>처리완료</li>
+
+          <li>2</li>
+          <li><a class="AdminQna"href="#">asdssddddddddddssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssdaaaaaaaaaaaaaaaaaaaaaaaaaaasddddddddd</a></li>
+          <li>권순찬</li>
+          <li>처리완료</li>
+
+
+        </ul>
+      </div>
+
+      <div class="QnaButtonBox">
+        <ul class="QnaButton">
+          <li><a href="#"><</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="AdminSendQnqModal">
+    <div class="modalOverlay"></div>
+    <!-- 약관동의 창 -->
+    <article class="AdminQnqModal">
+      <h2>처리 완료</h2>
+        <div>게시물번호 : 1</div>
+        <div>글쓴이:권순찬</div>
+        <div>등록일 : 2014-03-02</div>
+        <hr>
+        <div style="overflow-y: scroll; width:450px; height: 150px; margin: 0 auto">
+          내용:${content}내용:내용:${content}:${content}내용tent}내용:${content}내용:${content}tent}내용:${content}내용:${content}tent}내용:${content}내용:${content}tent}내용:${content}내용:${content}tent}내용:${content}내용:${content}
+        </div>
+        <hr>
+          <div>처리메세지</div><br>
+        <div style="overflow-y: scroll; width:450px; height: 100px; margin: 0 auto"><a>처리된 메세지</a>
+          글쓴 내용
+        </div>
+
+        <br>
+    </article>
+  </div>
+</head>
+<body>
+
+</body>
+</html>

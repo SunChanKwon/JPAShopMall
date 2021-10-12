@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /*------------------------------------*bar Meun css*/
+    #QnaList > li:nth-of-type(4n+1) {
+
+      width: 10%;
+    }
+    #QnaList > li:nth-of-type(4n+2) {
+
+      overflow: hidden;
+
+      width: 50%;
+    }
+
+    #QnaList > li:nth-of-type(4n+3) {
+
+      width: 20%;
+    }
+
+    #QnaList > li:nth-of-type(4n+4) {
+
+      width: 20%;
+    }
+
+    .AdminQnqModal > form > div
+    {
+
+      font-size: 20px;
+    }
+    .DivPadding
+    {
+      height: 50px;
+      background-color: red;
+    }
+
+    .QnaButton>li
+    {
+      float: left;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      margin-left: 60px;
+    }
+    .QnaRightBox
+    {
+      width: 100%;
+      height: 600px;
+    }
+    .QnaButton
+    {
+      width: 100%;
+      height: 55px;
+    }
+    .QnaButtonBox>ul>:nth-child(n){padding-left: 10px;}
+
+    #QnaList>li
+    {
+      float:left;
+      height: 50px;
+      width: 100px;
+      line-height:50px;
+      text-align: center;
+      font-size: 15px;
+    }
+    .QnaDataBox>li{
+      margin: 0 auto;
+    }
+    .QnaBoardContent
+    {
+      height: 600px;
+      width: 100%;
+      border:  1px solid red;
+      margin: 0 auto;
+      margin: 0 auto;
+    }
+  </style>
+  <link type="text/css" rel="stylesheet" href="../css/AdminBar.css">
+  <link type="text/css" rel="stylesheet" href="../css/Modal.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script defer type="text/javascript" src="../js/Admin.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#header").load("include.html")
+    });
+  </script>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <div id="header"></div>
+
+  <div class="TopContent">
+    <div class="TopSubContent">
+      <div>1:1 문의확인</div></div>
+
+    </div>
+
+  <div class="MainContent">
+      <div class="QnaRightBox">
+        <br>
+        <div class="QnaBoardContent">
+          <ul id="QnaList">
+            <li>NO</li>
+            <li>문의내용</li>
+            <li>문의자</li>
+            <li>등록일</li>
+
+            <li>1</li>
+            <li> </li>
+            <li>권순찬</li>
+            <li>2014-03-01</li>
+
+            <li>2</li>
+            <li><a class="AdminQna"href="#">asdssddddddddddssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssdaaaaaaaaaaaaaaaaaaaaaaaaaaasddddddddd</a></li>
+            <li>권순찬</li>
+            <li>2014-03-01</li>
+
+
+            <li>3</li>
+            <li><a class="AdminQna"href="#">asdssddddddddddssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssdaaaaaaaaaaaaaaaaaaaaaaaaaaasddddddddd</a></li>
+            <li>권순찬</li>
+            <li>2014-03-01</li>
+
+
+            <li>4</li>
+            <li><a class="AdminQna"href="#">asdssddddddddddssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssdaaaaaaaaaaaaaaaaaaaaaaaaaaasddddddddd</a></li>
+            <li>권순찬</li>
+            <li>2014-03-01</li>
+
+
+            <li>5</li>
+            <li><a class="AdminQna"href="#">asdssddddddddddssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssdaaaaaaaaaaaaaaaaaaaaaaaaaaasddddddddd</a></li>
+            <li>권순찬</li>
+            <li>2014-03-01</li>
+
+            <li>6</li>
+            <li><a class="AdminQna"href="#">asdssddddddddddssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssdaaaaaaaaaaaaaaaaaaaaaaaaaaasddddddddd</a></li>
+            <li>권순찬</li>
+            <li>2014-03-01</li>
+
+            <li>7</li>
+            <li><a class="AdminQna"href="#">asdssddddddddddssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssdaaaaaaaaaaaaaaaaaaaaaaaaaaasddddddddd</a></li>
+            <li>권순찬</li>
+            <li>2014-03-01</li>
+          </ul>
+        </div>
+
+        <div class="QnaButtonBox">
+          <ul class="QnaButton">
+            <li><a href="#"><</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">></a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+
+  <div class="AdminSendQnqModal">
+    <div class="modalOverlay"></div>
+    <!-- 약관동의 창 -->
+    <article class="AdminQnqModal">
+      <h2>문의 답장</h2>
+      <form method="post" action="#">
+          <div>게시물번호 : 1</div>
+          <div>글쓴이:권순찬</div>
+          <div>등록일 : 2014-03-02</div>
+        <hr>
+          <li>
+            <div style="overflow-y: scroll; width:450px; height: 200px; margin: 0 auto">
+              내용:${content}내용:내용:${content}:${content}내용tent}내용:${content}내용:${content}tent}내용:${content}내용:${content}tent}내용:${content}내용:${content}tent}내용:${content}내용:${content}tent}내용:${content}내용:${content}
+            </div>
+          </li>
+          <hr>
+          <textarea style="width: 450px; height: 50px; margin: 0 auto;" ></textarea>
+          <br>
+          <input type="submit" value="문의 답장"></input>
+      </form>
+    </article>
+  </div>
+</head>
+<body>
+
+</body>
+</html>
